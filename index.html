@@ -4,47 +4,356 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Stormhand — HD Visual Enhancement Project</title>
+  <meta name="description" content="Stormhand — Independent HD visual enhancement project for the classic client." />
+
   <style>
-    body{max-width:900px;margin:auto;padding:60px 20px;background:#0b0b0b;color:#eaeaea;
-      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.7}
-    h1{font-size:2.4rem;margin:0 0 10px}
-    .sub{opacity:.85;margin:0 0 25px}
-    .box{background:#141414;padding:22px;border-radius:12px;margin:18px 0}
-    a{color:#7cb7ff;text-decoration:none;font-weight:600}
-    a:hover{opacity:.85}
-    small{opacity:.75}
+    :root{
+      --bg:#0b0b0b;
+      --panel:#141414;
+      --text:#eaeaea;
+      --muted:rgba(234,234,234,.78);
+      --muted2:rgba(234,234,234,.62);
+      --link:#7cb7ff;
+      --border:rgba(255,255,255,.10);
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius:14px;
+      --max: 980px;
+    }
+
+    *{ box-sizing:border-box; }
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--text);
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      line-height:1.7;
+    }
+
+    a{ color:var(--link); text-decoration:none; font-weight:600; }
+    a:hover{ opacity:.85; }
+
+    .wrap{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:56px 18px 72px;
+    }
+
+    header{
+      display:flex;
+      flex-direction:column;
+      gap:14px;
+      margin-bottom:22px;
+    }
+
+    .title{
+      font-size:2.55rem;
+      letter-spacing:.2px;
+      margin:0;
+      line-height:1.12;
+    }
+
+    .subtitle{
+      margin:0;
+      color:var(--muted);
+      font-size:1.05rem;
+    }
+
+    .pillrow{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:6px;
+    }
+
+    .pill{
+      border:1px solid var(--border);
+      color:var(--muted2);
+      padding:6px 10px;
+      border-radius:999px;
+      font-size:.86rem;
+      background:rgba(255,255,255,.03);
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap:16px;
+    }
+
+    .box{
+      background:var(--panel);
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      padding:20px;
+      box-shadow:var(--shadow);
+    }
+
+    h2{
+      margin:0 0 10px;
+      font-size:1.35rem;
+      letter-spacing:.2px;
+    }
+
+    p{ margin:0 0 10px; }
+    p:last-child{ margin-bottom:0; }
+
+    ul{
+      margin:10px 0 0;
+      padding-left:18px;
+      color:var(--muted);
+    }
+
+    .ctaRow{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-top:14px;
+    }
+
+    .btn{
+      display:inline-block;
+      padding:10px 14px;
+      border-radius:12px;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.04);
+      box-shadow:0 10px 22px rgba(0,0,0,.25);
+      font-weight:700;
+    }
+
+    .btn.primary{
+      background:rgba(124,183,255,.14);
+      border-color:rgba(124,183,255,.30);
+    }
+
+    .note{
+      color:var(--muted2);
+      font-size:.95rem;
+    }
+
+    .small{
+      color:var(--muted2);
+      font-size:.9rem;
+    }
+
+    .divider{
+      height:1px;
+      background:var(--border);
+      margin:10px 0 14px;
+    }
+
+    .twoCol{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap:14px;
+    }
+
+    @media (min-width: 860px){
+      .grid{ grid-template-columns: 1.2fr .8fr; align-items:start; }
+      .twoCol{ grid-template-columns: 1fr 1fr; }
+    }
+
+    /* Optional screenshot gallery */
+    .shots{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap:12px;
+      margin-top:12px;
+    }
+    @media (min-width: 700px){
+      .shots{ grid-template-columns: 1fr 1fr; }
+    }
+    .shot{
+      border-radius:12px;
+      border:1px solid var(--border);
+      overflow:hidden;
+      background:rgba(255,255,255,.02);
+    }
+    .shot img{
+      width:100%;
+      height:auto;
+      display:block;
+    }
+    .shot .cap{
+      padding:10px 12px;
+      color:var(--muted2);
+      font-size:.9rem;
+    }
+
+    footer{
+      margin-top:18px;
+      color:var(--muted2);
+      font-size:.88rem;
+    }
   </style>
 </head>
+
 <body>
-  <h1>Stormhand</h1>
-  <p class="sub">Independent HD Visual Enhancement Project</p>
+  <div class="wrap">
 
-  <div class="box">
-    <p>
-      An independent HD visual enhancement project developed for the classic World of Warcraft® client.
-      Built with a focus on stability, immersion, and respect for the original artistic direction.
-    </p>
-  </div>
+    <!-- HERO -->
+    <header>
+      <h1 class="title">Stormhand</h1>
+      <p class="subtitle"><strong>Independent HD Visual Enhancement Project</strong></p>
 
-  <div class="box">
-    <h2>Downloads</h2>
-    <p>👉 <a href="SEU_LINK_MEDIAFIRE_AQUI">Latest Version</a></p>
-  </div>
+      <p class="subtitle">
+        A carefully curated high-definition visual overhaul designed for the classic client — focused on stability, immersion,
+        and respect for the original artistic direction.
+      </p>
 
-  <div class="box">
-    <h2>Support</h2>
-    <p>Support is entirely optional — but genuinely appreciated.</p>
-    <p>👉 <a href="https://ko-fi.com/stormhand">Ko-fi</a></p>
-  </div>
+      <div class="pillrow">
+        <span class="pill">Modular</span>
+        <span class="pill">Stability-first</span>
+        <span class="pill">Curated integrations</span>
+        <span class="pill">Long-term maintenance</span>
+      </div>
+    </header>
 
-  <div class="box">
-    <h2>Important Note</h2>
-    <p>
-      This fan-made project is not affiliated with, endorsed, or sponsored by Blizzard Entertainment.
-      All original assets remain the property of their respective owners.
-    </p>
-    <p>Contributions support my personal development time and technical research only.</p>
-    <p><small>World of Warcraft® is a registered trademark of Blizzard Entertainment.</small></p>
+    <div class="grid">
+
+      <!-- LEFT COLUMN -->
+      <section class="box">
+        <h2>About the Project</h2>
+        <p>
+          Stormhand is a long-term technical project dedicated to enhancing the visual fidelity of the classic
+          <strong>World of Warcraft®</strong> client while preserving its original atmosphere.
+        </p>
+        <p>
+          My work involves carefully restructuring, converting, and integrating high-definition visual elements so they function smoothly
+          within the original engine — always prioritizing stability, immersion, and consistency.
+        </p>
+        <p class="note">
+          This is not a “throw files together” pack — it’s a maintained visual framework built through testing, iteration, and a lot of time.
+        </p>
+
+        <!-- OPTIONAL: Screenshots (recommended). Upload images to this repo and replace the src paths. -->
+        <div class="divider"></div>
+        <h2>Preview</h2>
+        <p class="small">Optional but strongly recommended: upload 2–4 screenshots to this repository and link them here.</p>
+
+        <div class="shots">
+          <!-- Replace screenshot paths or remove this block if you don't want screenshots yet -->
+          <div class="shot">
+            <img src="screenshots/shot1.jpg" alt="Stormhand preview 1">
+            <div class="cap">Screenshot #1 — replace this caption.</div>
+          </div>
+          <div class="shot">
+            <img src="screenshots/shot2.jpg" alt="Stormhand preview 2">
+            <div class="cap">Screenshot #2 — replace this caption.</div>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <h2>Modular Architecture</h2>
+        <p class="note">
+          The project is fully modular — install only what you want, and combine modules freely to shape your world.
+        </p>
+
+        <div class="twoCol">
+          <div>
+            <ul>
+              <li>Player Characters & NPCs</li>
+              <li>Buildings</li>
+              <li>Creatures</li>
+              <li>Doodads</li>
+              <li>Environment</li>
+              <li>Gear & Weapons</li>
+            </ul>
+          </div>
+          <div>
+            <ul>
+              <li>Interface</li>
+              <li>Maps & Loading Screens</li>
+              <li>Sounds & Music</li>
+              <li>Spell Visual Effects</li>
+              <li>Ultra HD Character Textures</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <h2>Integrated Works</h2>
+        <p class="note">
+          Stormhand respectfully incorporates and builds upon outstanding work from talented creators within the modding community.
+          Integrations are included with permission and deep appreciation.
+        </p>
+        <p class="small">
+          (If you want, list credits here later — names/links — but keep it clean and short.)
+        </p>
+      </section>
+
+      <!-- RIGHT COLUMN -->
+      <aside class="box">
+        <h2>Downloads</h2>
+        <p class="note">Use the links below to access the latest release packages.</p>
+
+        <div class="ctaRow">
+          <!-- Replace with your MediaFire link(s) -->
+          <a class="btn primary" href="PASTE_YOUR_MEDIAFIRE_LATEST_LINK_HERE">Latest Version</a>
+          <!-- Optional second link -->
+          <a class="btn" href="PASTE_YOUR_MEDIAFIRE_ALT_LINK_HERE">Optional / Add-ons</a>
+        </div>
+
+        <div class="divider"></div>
+
+        <h2>Important Installation Notes</h2>
+        <p class="note">
+          Some modules depend on others to function correctly. Please read the instructions carefully before installing.
+        </p>
+        <p class="note">
+          <strong>VanillaHelpers</strong> is required for the project to operate properly.
+        </p>
+
+        <!-- Optional: quick install steps -->
+        <div class="divider"></div>
+        <h2>Quick Install</h2>
+        <ol class="note" style="margin:10px 0 0; padding-left:18px;">
+          <li>Download the latest package.</li>
+          <li>Follow the included instructions for your client setup.</li>
+          <li>Install required dependencies (e.g., VanillaHelpers).</li>
+          <li>Launch and test — then enable extra modules gradually.</li>
+        </ol>
+
+        <div class="divider"></div>
+
+        <h2>Support</h2>
+        <p class="note">
+          If you find value in this work and wish to support its continued evolution, contributions are welcome — but entirely optional.
+        </p>
+        <p class="note">
+          Contributions support my personal development time and technical research only.
+        </p>
+        <div class="ctaRow">
+          <a class="btn primary" href="https://ko-fi.com/stormhand">Ko-fi</a>
+        </div>
+
+        <div class="divider"></div>
+
+        <h2>Credits</h2>
+        <p class="note">
+          Deep gratitude to everyone who contributed talent, knowledge, and testing feedback to the community.
+        </p>
+
+        <div class="divider"></div>
+
+        <h2>Important Note</h2>
+        <p class="small">
+          This fan-made project is not affiliated with, endorsed, or sponsored by Blizzard Entertainment.
+          All original assets remain the property of their respective owners.
+        </p>
+        <p class="small">
+          World of Warcraft® is a registered trademark of Blizzard Entertainment.
+        </p>
+      </aside>
+
+    </div>
+
+    <footer>
+      <p>
+        Tip: keep this page as the official hub. Your forum post can simply point here at the top.
+      </p>
+    </footer>
   </div>
 </body>
 </html>
