@@ -236,6 +236,49 @@
       color:var(--muted2);
       font-size:.88rem;
     }
+
+@media (max-width: 520px){
+  .topnav{
+    flex-wrap:wrap;
+    gap:10px;
+  }
+
+  .navlinks{
+    flex-wrap:wrap;
+    gap:14px;
+  }
+}
+
+/* Premium top bar */
+.topnav{
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  padding: 10px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.10);
+  background: rgba(8,8,8,.55);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 12px 28px rgba(0,0,0,.35);
+}
+
+/* Make links feel more "product" */
+.navlinks a{
+  padding: 8px 10px;
+  border-radius: 999px;
+}
+.navlinks a:hover{
+  background: rgba(230,177,90,.10);
+  color: var(--gold);
+}
+
+/* Smaller + more proportional support button */
+.support-btn{
+  padding: 10px 14px;
+  font-size: .95rem;
+}
+
   </style>
 </head>
 
@@ -247,6 +290,17 @@
       <h1 class="title" style="color:var(--gold);">Project Reforged</h1>
       <p class="subtitle"><strong>A High-Definition Visual Framework for World of Warcraft® Classic</strong></p>
 
+<nav class="topnav">
+  <div class="navlinks">
+    <a href="/downloads/">Downloads</a>
+    <a href="https://discord.gg/SEU_LINK" target="_blank">Discord</a>
+  </div>
+
+  <a class="support-btn" href="https://ko-fi.com/stormhand" target="_blank">
+    Support
+  </a>
+</nav>
+
 <div class="divider"></div>
 
       <p class="subtitle">
@@ -256,9 +310,7 @@
      <nav class="topnav heroNav">
 
   <div class="navlinks">
-    <a href="/">Home</a>
     <a href="/downloads/">Downloads</a>
-    <a href="#compatibility">Compatibility</a>
     <a href="https://discord.gg/SEU_LINK" target="_blank">Discord</a>
   </div>
 
