@@ -282,6 +282,30 @@
 <!-- HERO -->
 <header>
 
+header{
+  position:relative;
+  overflow:hidden;
+}
+
+/* Cinematic hero aura */
+header:before{
+  content:"";
+  position:absolute;
+  inset:-120px -40px -80px -40px;
+  background:
+    radial-gradient(600px 260px at 30% 10%, rgba(230,177,90,.16), transparent 60%),
+    radial-gradient(520px 260px at 80% 35%, rgba(124,183,255,.10), transparent 55%),
+    radial-gradient(900px 520px at 50% 0%, rgba(255,255,255,.06), transparent 65%);
+  filter: blur(18px);
+  opacity:.75;
+  pointer-events:none;
+  z-index:0;
+}
+
+  position:relative;
+  z-index:1;
+}
+
   <h1 class="title" style="color:var(--gold);">
     Project Reforged
   </h1>
