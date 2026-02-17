@@ -11,36 +11,48 @@
 .topnav{
   display:flex;
   align-items:center;
-  justify-content:space-between;
-  margin-bottom:28px;
+  justify-content:center;   /* <- centraliza tudo */
+  gap:14px;                 /* <- espaço igual entre itens */
+  margin:14px 0 10px;
+  padding:0;                /* <- remove “capsula” grande */
+  border:none;
+  background:none;
+  box-shadow:none;
+  position:static;          /* <- remove sticky */
 }
 
 .navlinks{
   display:flex;
-  gap:20px;
+  gap:14px;
 }
 
 .navlinks a{
+  padding:10px 16px;
+  border-radius:999px;
+  border:1px solid rgba(255,255,255,.10);
+  background:rgba(255,255,255,.03);
   color:var(--muted);
-  text-decoration:none;
-  font-weight:600;
+  font-weight:700;
   font-size:.95rem;
+  text-decoration:none;
   transition:.2s;
 }
 
 .navlinks a:hover{
+  background:rgba(230,177,90,.10);
+  border-color:rgba(230,177,90,.25);
   color:var(--gold);
 }
 
-/* BOTÃO SUPPORT */
 .support-btn{
-  padding:12px 18px;
-  font-size:1.05rem;
+  padding:10px 16px;
   border-radius:999px;
   border:1px solid rgba(230,177,90,.35);
+  background:rgba(230,177,90,.06);
   color:var(--gold);
+  font-weight:800;
+  font-size:.95rem;
   text-decoration:none;
-  font-weight:700;
   transition:.2s;
 }
 
@@ -237,31 +249,12 @@
       font-size:.88rem;
     }
 
-@media (max-width: 520px){
-  .topnav{
-    flex-wrap:wrap;
-    gap:10px;
-  }
-
   .navlinks{
     flex-wrap:wrap;
     gap:14px;
   }
 }
 
-/* Premium top bar */
-.topnav{
-  position: sticky;
-  top: 0;
-  z-index: 50;
-  padding: 10px 12px;
-  border-radius: 999px;
-  border: 1px solid rgba(255,255,255,.10);
-  background: rgba(8,8,8,.55);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  box-shadow: 0 12px 28px rgba(0,0,0,.35);
-}
 
 /* Make links feel more "product" */
 .navlinks a{
@@ -297,28 +290,19 @@
     <strong>A High-Definition Visual Framework for World of Warcraft® Classic</strong>
   </p>
 
-
-  <!-- MINI NAV (Option A) -->
-  <nav class="topnav">
-
-    <div class="navlinks">
-      <a href="/downloads/">Downloads</a>
-      <a href="https://discord.gg/SEU_LINK" target="_blank">Discord</a>
-    </div>
-
-    <a class="support-btn"
-       href="https://ko-fi.com/stormhand"
-       target="_blank">
-       Support
-    </a>
-
-  </nav>
-
   <div class="divider"></div>
 
   <p class="subtitle">
     Project Reforged is a carefully curated high-definition visual overhaul designed for the classic World of Warcraft® client — focused on stability, immersion, and respect for the original artistic direction.
   </p>
+
+<nav class="topnav">
+  <div class="navlinks">
+    <a href="/downloads/">Downloads</a>
+    <a href="https://discord.gg/SEU_LINK" target="_blank">Discord</a>
+    <a class="support-btn" href="https://ko-fi.com/stormhand" target="_blank">Support</a>
+  </div>
+</nav>
 
 </header>
   
