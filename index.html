@@ -252,16 +252,53 @@
       border-radius:14px;
     }
 
-    .changelog-link{
-  display:block;
+    /* Latest Release: "What's New" + Changelog link */
+.whatsnew{
+  margin-top:14px;
+  padding-top:12px;
+  border-top:1px solid rgba(255,255,255,.08);
+}
+
+.whatsnew h3{
+  margin:0 0 8px;
+  font-size:1rem;
+  letter-spacing:.2px;
+  color:var(--text);
+}
+
+.whatsnew ul{
+  margin:0;
+  padding-left:18px;
+  color:var(--muted);
+}
+
+.whatsnew li{
+  margin:6px 0;
+}
+
+.changelog-link{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
   margin-top:10px;
-  font-size:.9rem;
+  font-size:.92rem;
   color:var(--muted2);
+  text-decoration:none;
+  font-weight:700;
 }
 
 .changelog-link:hover{
   color:var(--gold);
 }
+
+.changelog-link .arrow{
+  transition:transform .2s;
+}
+
+.changelog-link:hover .arrow{
+  transform:translateX(3px);
+}
+
 
     .center{ text-align:center; }
   </style>
@@ -315,12 +352,27 @@
           <p style="margin:0;"><strong>Updated:</strong> <span class="note" style="color:var(--gold);"><b>2026-02-15</b></span></p>
 
           <div class="ctaRow" style="margin-top:14px;">
-            <a class="btn primary" href="/downloads/">Download Latest Version</a>
-          </div>
+  <a class="btn primary" href="/downloads/">Download Latest Version</a>
+</div>
 
-          <a class="changelog-link" href="/changelog">
-          View Full Changelog →
-          </a>
+<div class="whatsnew">
+  <h3>What’s New in vX.X</h3>
+  <ul>
+    <li>Massive environment texture overhaul</li>
+    <li>Improved memory handling & stability (DXVK recommended)</li>
+    <li>New spell visual effects + updated interface elements</li>
+  </ul>
+
+  <a class="changelog-link" href="/changelog">
+    View Full Patch Notes <span class="arrow">→</span>
+  </a>
+</div>
+
+<p class="small" style="margin-top:12px;">
+  <strong>Installation Notice:</strong><br>
+  For the best experience, take a moment to review the information and installation guidelines below before downloading.
+</p>
+
 
           <p class="small" style="margin-top:12px;">
             <strong>Installation Notice:</strong><br>
