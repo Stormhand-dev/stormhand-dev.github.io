@@ -7,64 +7,6 @@
   <meta name="description" content="Project Reforged — A High-Definition Visual Framework for the Classic Client" />
 
   <style>
-
-.topnav{
-  display:flex;
-  align-items:center;
-  justify-content:center;   /* <- centraliza tudo */
-  gap:14px;                 /* <- espaço igual entre itens */
-  margin:14px 0 10px;
-  padding:0;                /* <- remove “capsula” grande */
-  border:none;
-  background:none;
-  box-shadow:none;
-  position:static;          /* <- remove sticky */
-}
-
-.navlinks{
-  display:flex;
-  gap:14px;
-}
-
-.navlinks a{
-  padding:10px 16px;
-  border-radius:999px;
-  border:1px solid rgba(255,255,255,.10);
-  background:rgba(255,255,255,.10);
-  color:var(--muted);
-  font-weight:700;
-  font-size:.95rem;
-  text-decoration:none;
-  transition:.2s;
-}
-
-.navlinks a:hover{
-  background:rgba(230,177,90,.10);
-  border-color:rgba(230,177,90,.25);
-  color:var(--gold);
-}
-
-
-.support-btn{
-  padding:10px 18px;
-  border-radius:999px;
-  border:1px solid rgba(230,177,90,.55);
-  color:#1a1408;
-  background:linear-gradient(
-    180deg,
-    #f0c674,
-    #e6b15a
-  );
-  font-weight:700;
-  transition:.25s;
-}
-
-.support-btn:hover{
-  transform:translateY(-2px);
-  box-shadow:0 10px 24px rgba(230,177,90,.25);
-}
-
-
     :root{
       --bg:#080808;
       --panel:#141414;
@@ -75,16 +17,14 @@
       --goldlight:#f0c674;
       --link:#7cb7ff;
       --border:rgba(255,255,255,.10);
-      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --shadow:0 10px 30px rgba(0,0,0,.35);
       --radius:14px;
-      --max: 860px;
+      --max:760px;
     }
 
-html{
-scroll-behavior:smooth;
-}
-
+    html{ scroll-behavior:smooth; }
     *{ box-sizing:border-box; }
+
     body{
       margin:0;
       background:var(--bg);
@@ -107,17 +47,16 @@ scroll-behavior:smooth;
       flex-direction:column;
       gap:10px;
       margin-bottom:14px;
-}
+    }
 
     .title{
-  font-size:2.7rem;
-  letter-spacing:.6px;
-  margin-bottom:-14px;
-  font-weight:750;
-  text-wrap:balance;
-}
+      font-size:2.7rem;
+      letter-spacing:.6px;
       margin:0;
+      margin-bottom:-14px;
+      font-weight:750;
       line-height:1.12;
+      text-wrap:balance;
     }
 
     .subtitle{
@@ -128,27 +67,75 @@ scroll-behavior:smooth;
       max-width:720px;
     }
 
-    .pillrow{
+    .divider{
+      height:1px;
+      opacity:.6;
+      background:var(--border);
+      margin:10px 0 14px;
+    }
+
+    /* NAV */
+    .topnav{
       display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:14px;
+      margin:14px 0 10px;
+      padding:0;
+      border:none;
+      background:none;
+      box-shadow:none;
+      position:static;
+    }
+
+    .navlinks{
+      display:flex;
+      gap:14px;
       flex-wrap:wrap;
-      gap:10px;
-      margin-top:6px;
+      justify-content:center;
     }
 
-    .pill{
-      border:1px solid var(--border);
-      color:var(--muted2);
-      padding:6px 10px;
+    .navlinks a{
+      padding:10px 16px;
       border-radius:999px;
-      font-size:.86rem;
-      background:rgba(255,255,255,.03);
+      border:1px solid rgba(255,255,255,.10);
+      background:rgba(255,255,255,.10);
+      color:var(--muted);
+      font-weight:700;
+      font-size:.95rem;
+      text-decoration:none;
+      transition:.2s;
     }
 
+    .navlinks a:hover{
+      background:rgba(230,177,90,.10);
+      border-color:rgba(230,177,90,.25);
+      color:var(--gold);
+    }
+
+    .support-btn{
+      padding:10px 18px;
+      border-radius:999px;
+      border:1px solid rgba(230,177,90,.55);
+      color:#1a1408;
+      background:linear-gradient(180deg,#f0c674,#e6b15a);
+      font-weight:800;
+      transition:.25s;
+    }
+
+    .support-btn:hover{
+      transform:translateY(-2px);
+      box-shadow:0 10px 24px rgba(230,177,90,.25);
+    }
+
+    /* 1-COLUMN LAYOUT (guaranteed) */
     .grid{
-      display:grid;
-      grid-template-columns: 1fr;
+      display:flex;
+      flex-direction:column;
       gap:16px;
     }
+
+    section, aside{ width:100%; }
 
     .box{
       background:var(--panel);
@@ -173,14 +160,18 @@ scroll-behavior:smooth;
       color:var(--muted);
     }
 
+    ol{
+      color:var(--muted);
+    }
+
     .ctaRow{
-  display:flex;
-  flex-wrap:wrap;
-  gap:12px;
-  margin-top:18px;
-  justify-content:center;
-  width:100%;
-}
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-top:18px;
+      justify-content:center;
+      width:100%;
+    }
 
     .btn{
       display:inline-block;
@@ -189,7 +180,7 @@ scroll-behavior:smooth;
       border:1px solid var(--border);
       background:rgba(255,255,255,.04);
       box-shadow:0 10px 22px rgba(0,0,0,.25);
-      font-weight:700;
+      font-weight:800;
     }
 
     .btn.primary{
@@ -207,46 +198,31 @@ scroll-behavior:smooth;
       font-size:.9rem;
     }
 
-    .divider{
-      height:1px;
-      opacity:.6;
-      background:var(--border);
-      margin:10px 0 14px;
-    }
-
-    .twoCol{
-      display:grid;
-      grid-template-columns: 1fr;
-      gap:14px;
-    }
-
-    .wrap{
-  max-width:760px;
-  margin:auto;
-}
-
-
     /* Optional screenshot gallery */
     .shots{
       display:grid;
-      grid-template-columns: 1fr;
+      grid-template-columns:1fr;
       gap:12px;
       margin-top:12px;
     }
-    @media (min-width: 700px){
-      .shots{ grid-template-columns: 1fr 1fr; }
+
+    @media (min-width:700px){
+      .shots{ grid-template-columns:1fr 1fr; }
     }
+
     .shot{
       border-radius:12px;
       border:1px solid var(--border);
       overflow:hidden;
       background:rgba(255,255,255,.02);
     }
+
     .shot img{
       width:100%;
       height:auto;
       display:block;
     }
+
     .shot .cap{
       padding:10px 12px;
       color:var(--muted2);
@@ -257,71 +233,57 @@ scroll-behavior:smooth;
       margin-top:18px;
       color:var(--muted2);
       font-size:.88rem;
+      text-align:center;
     }
 
-  .navlinks{
-    flex-wrap:wrap;
-    gap:14px;
-  }
-}
+    /* Small tweaks */
+    .innerCard{
+      background:rgba(255,255,255,.03);
+      border:1px solid rgba(124,183,255,.25);
+      border-radius:14px;
+      padding:18px;
+    }
 
+    .goldPanel{
+      background:linear-gradient(180deg,rgba(230,177,90,.10),rgba(230,177,90,.04));
+      border:1px solid rgba(230,177,90,.25);
+      padding:18px;
+      border-radius:14px;
+    }
 
-/* Make links feel more "product" */
-.navlinks a{
-  padding: 8px 10px;
-  border-radius: 999px;
-}
-.navlinks a:hover{
-  background: rgba(230,177,90,.10);
-  color: var(--gold);
-}
-
-/* Smaller + more proportional support button */
-.support-btn{
-  padding: 10px 14px;
-  font-size: .95rem;
-}
-
+    .center{ text-align:center; }
   </style>
 </head>
 
 <body>
   <div class="wrap">
 
-   
-<!-- HERO -->
-<header>
+    <!-- HERO -->
+    <header>
+      <h1 class="title" style="color:var(--gold);">Project Reforged</h1>
 
-  <h1 class="title" style="color:var(--gold);">
-    Project Reforged
-  </h1>
+      <p class="subtitle">
+        <strong>A High-Definition Visual Framework for World of Warcraft® Classic</strong>
+      </p>
 
-  <p class="subtitle">
-    <strong>A High-Definition Visual Framework for World of Warcraft® Classic</strong>
-  </p>
+      <div class="divider"></div>
 
-  <div class="divider"></div>
+      <p class="subtitle">
+        Project Reforged is a carefully curated high-definition visual overhaul designed for the classic World of Warcraft® client — focused on stability, immersion, and respect for the original artistic direction.
+      </p>
 
-  <p class="subtitle">
-    Project Reforged is a carefully curated high-definition visual overhaul designed for the classic World of Warcraft® client — focused on stability, immersion, and respect for the original artistic direction.
-  </p>
-
-<nav class="topnav">
-  <div class="navlinks">
-    <a href="#install">Install</a>
-<a class="support-btn" href="#support">Support</a>
-    <a href="https://discord.gg/SEU_LINK" target="_blank">Discord</a>
-
-  
-  </div>
-</nav>
-
-</header>
-  
+      <nav class="topnav" aria-label="Primary">
+        <div class="navlinks">
+          <a href="#install">Install</a>
+          <a class="support-btn" href="#support">Support</a>
+          <a href="https://discord.gg/SEU_LINK" target="_blank" rel="noreferrer">Discord</a>
+        </div>
+      </nav>
+    </header>
 
     <div class="grid">
 
-      <!-- LEFT COLUMN -->
+      <!-- MAIN CONTENT -->
       <section class="box">
         <h2>What is Project Reforged</h2>
         <p>
@@ -332,203 +294,163 @@ scroll-behavior:smooth;
           This work involves carefully restructuring, converting, and integrating high-definition visual elements so they function smoothly within the original engine — always prioritizing stability, immersion, and consistency.
         </p>
 
-<div class="divider"></div>
-
-<h2 style="color:var(--gold);">Latest Release</h2>
-
-<div class="box" style="background:rgba(255,255,255,.03); border-color:rgba(124,183,255,.25);">
-  <p style="margin:0 0 6px;">
-    <strong>Version:</strong> <span class="note">vX.X</span>
-  </p>
-  <p style="margin:0 0 6px;">
-    <strong>Status:</strong> <span class="note">Stable</span>
-  </p>
-  <p style="margin:0;">
-    <strong>Updated:</strong> <span class="note" style="color:var(--gold);"><b>2026-02-15</span></b>
-  </p>
-
-  <div class="ctaRow" style="margin-top:14px;">
-    <a class="btn primary" href="/downloads/">
-Download Latest Version
-</a>
-  
-  </div>
-
-<p class="small" style="margin-top:12px;">
-<strong>Installation Notice:</strong><br>
-For the best experience, take a moment to review the information and installation guidelines below before downloading.
-</p>
-  
-</div>
-
-<div class="divider"></div>
-
-<div style="
-background:linear-gradient(
-180deg,
-rgba(230,177,90,.10),
-rgba(230,177,90,.04)
-);
-border:1px solid rgba(230,177,90,.25);
-padding:18px;
-border-radius:14px;
-">
-
-<section id="support">
-<p style="margin:0 0 8px; font-weight:600;">
-⭐ <strong>Built Through Hundreds of Hours</strong></p>
-<p>
-Project Reforged is an independent initiative sustained by ongoing development and long-term maintenance.  
-</p>
-
-<p class="note" style="margin-bottom:14px;">
-If you believe projects like this should continue to exist, your support makes it possible.
-Every contribution directly sustains development time and enables future updates.
-</p>
-
-<center>
-<a class="support-btn" 
-href="https://ko-fi.com/stormhand" 
-target="_blank">
-Support Reforged
-</a>
-</center>
-</div>
-
-        <!-- OPTIONAL: Screenshots (recommended). Upload images to this repo and replace the src paths. -->
         <div class="divider"></div>
+
+        <h2 style="color:var(--gold);">Latest Release</h2>
+        <div class="innerCard">
+          <p style="margin:0 0 6px;"><strong>Version:</strong> <span class="note">vX.X</span></p>
+          <p style="margin:0 0 6px;"><strong>Status:</strong> <span class="note">Stable</span></p>
+          <p style="margin:0;"><strong>Updated:</strong> <span class="note" style="color:var(--gold);"><b>2026-02-15</b></span></p>
+
+          <div class="ctaRow" style="margin-top:14px;">
+            <a class="btn primary" href="/downloads/">Download Latest Version</a>
+          </div>
+
+          <p class="small" style="margin-top:12px;">
+            <strong>Installation Notice:</strong><br>
+            For the best experience, take a moment to review the information and installation guidelines below before downloading.
+          </p>
+        </div>
+
+        <div class="divider"></div>
+
+        <section id="support" class="goldPanel">
+          <p style="margin:0 0 8px; font-weight:700;">⭐ <strong>Built Through Hundreds of Hours</strong></p>
+          <p>Project Reforged is an independent initiative sustained by ongoing development and long-term maintenance.</p>
+
+          <p class="note" style="margin-bottom:14px;">
+            If you believe projects like this should continue to exist, your support makes it possible.
+            Every contribution directly sustains development time and enables future updates.
+          </p>
+
+          <div class="center">
+            <a class="support-btn" href="https://ko-fi.com/stormhand" target="_blank" rel="noreferrer">Support Reforged</a>
+          </div>
+        </section>
+
+        <div class="divider"></div>
+
         <h2>Preview</h2>
         <p class="small">Optional but strongly recommended: upload 2–4 screenshots to this repository and link them here.</p>
 
         <div class="shots">
-          <!-- Replace screenshot paths or remove this block if you don't want screenshots yet -->
           <div class="shot">
-            <img src="screenshots/shot1.jpg" alt="Stormhand preview 1">
+            <img src="screenshots/shot1.jpg" alt="Project Reforged preview 1">
             <div class="cap">Screenshot #1 — replace this caption.</div>
           </div>
           <div class="shot">
-            <img src="screenshots/shot2.jpg" alt="Stormhand preview 2">
+            <img src="screenshots/shot2.jpg" alt="Project Reforged preview 2">
             <div class="cap">Screenshot #2 — replace this caption.</div>
           </div>
         </div>
 
-<div class="divider"></div>
+        <div class="divider"></div>
 
-<h2>Compatibility</h2>
-<p class="note">
-Project Reforged is built with flexibility in mind and has been successfully tested across multiple classic-based environments.
-</p>
+        <h2>Compatibility</h2>
+        <p class="note">
+          Project Reforged is built with flexibility in mind and has been successfully tested across multiple classic-based environments.
+        </p>
 
-<p class="note"><strong>Currently verified compatibility includes:</strong></p>
+        <p class="note"><strong>Currently verified compatibility includes:</strong></p>
+        <ul>
+          <li>Vanilla-based clients (1.12 architecture)</li>
+          <li>Turtle WoW</li>
+        </ul>
 
-<ul>
-    <li>Vanilla-based clients (1.12 architecture)</li>
-<li>Turtle WoW</li>
+        <br>
+        <p class="small">
+          Compatibility may evolve over time as the project continues to mature.
+          Project Reforged is an independent technical initiative and is not affiliated with any server, platform, or publisher.
+        </p>
 
-</ul>
-<br>
-<p class="small">
-Compatibility may evolve over time as the project continues to mature.  
-Project Reforged is an independent technical initiative and is not affiliated with any server, platform, or publisher.
-</p>
+        <div class="divider"></div>
 
-<div class="divider"></div>
+        <h2>Technical Collaboration</h2>
+        <p class="note">
+          If you are developing a project that values visual fidelity, stability, and long-term maintainability — and believe Project Reforged could integrate well within your environment — feel free to get in touch.
+        </p>
 
-<h2>Technical Collaboration</h2>
-<p class="note">
-If you are developing a project that values visual fidelity, stability, and long-term maintainability — and believe Project Reforged could integrate well within your environment — feel free to get in touch.
-</p>
-
-<p class="small">
-Contact via Discord:  
-<a href="https://discord.gg/SEU_LINK_AQUI" target="_blank">Join the Project Reforged Discord</a>
-</p>
+        <p class="small">
+          Contact via Discord:
+          <a href="https://discord.gg/SEU_LINK_AQUI" target="_blank" rel="noreferrer">Join the Project Reforged Discord</a>
+        </p>
 
         <div class="divider"></div>
 
         <h2>🔱 Modular Architecture</h2>
         <p class="note">
-          
-To accommodate all the new content — and to fulfill countless requests from you, the community — Project Reforged is now more customizable than ever.
-Hold the power to shape Azeroth to your liking through a series of mighty modules:
+          To accommodate all the new content — and to fulfill countless requests from you, the community — Project Reforged is now more customizable than ever.
+          Hold the power to shape Azeroth to your liking through a series of mighty modules:
         </p>
 
-        <div class="twoCol">
-          <div>
-            <ul>
-              <li>🧙‍♂️ <b>PATCH-A</b>: Player Characters & NPCs</li>
-              <li>🏰 <b>PATCH-B</b>: Buildings</li>
-              <li>🐉 <b>PATCH-C</b>: Creatures</li>
-              <li>🌿<b> PATCH-D</b>: Doodads</li>
-              <li>🌄 <b>PATCH-E</b>: Environment</li>
-              <li>⚔️ <b>PATCH-G</b>: Gear & Weapons</li>
-              <li>🧭 <b>PATCH-I</b>: Interface</li>
-              <li>💃 <b>PATCH-L</b>: A Little Extra for Females</li>
-              <li>🗺️ <b>PATCH-M</b>: Maps & Loading Screens</li>
-<li>🌑 <b>PATCH-N</b>: Darker Nights</li>
-<li>🔥 <b>PATCH-O</b>: Raid Visuals Mod</li>
-              <li>🎵<b> PATCH-S</b>: Sounds & Music</li>
-              <li>✨ <b>PATCH-V</b>: Visual Effects for Spells</li>
-              <li>💎 <b>PATCH-U</b>: Ultra HD Character Textures</li>
-            </ul>
-          </div>
-        </div>
+        <ul>
+          <li>🧙‍♂️ <b>PATCH-A</b>: Player Characters & NPCs</li>
+          <li>🏰 <b>PATCH-B</b>: Buildings</li>
+          <li>🐉 <b>PATCH-C</b>: Creatures</li>
+          <li>🌿 <b>PATCH-D</b>: Doodads</li>
+          <li>🌄 <b>PATCH-E</b>: Environment</li>
+          <li>⚔️ <b>PATCH-G</b>: Gear & Weapons</li>
+          <li>🧭 <b>PATCH-I</b>: Interface</li>
+          <li>💃 <b>PATCH-L</b>: A Little Extra for Females</li>
+          <li>🗺️ <b>PATCH-M</b>: Maps & Loading Screens</li>
+          <li>🌑 <b>PATCH-N</b>: Darker Nights</li>
+          <li>🔥 <b>PATCH-O</b>: Raid Visuals Mod</li>
+          <li>🎵 <b>PATCH-S</b>: Sounds & Music</li>
+          <li>✨ <b>PATCH-V</b>: Visual Effects for Spells</li>
+          <li>💎 <b>PATCH-U</b>: Ultra HD Character Textures</li>
+        </ul>
 
         <div class="divider"></div>
 
         <h2>🌍 New Integrations and Legendary Additions</h2>
         <p class="note">
-         <strong> Project Reforged</strong> respectfully incorporates and builds upon outstanding work from talented creators within the modding community.
+          <strong>Project Reforged</strong> respectfully incorporates and builds upon outstanding work from talented creators within the modding community.
           Integrations are included with permission and deep appreciation.
-<ul>
-<font size=-1>
-<li>⚜️ <b>Classiic HD Patch</li></b>
-<li>🪶 <b>VIDOOO’s Ground & Tileset</b> – a stunning reimagining of Azeroth’s terrain</li>
-<li>💧 <b>Epoch Water</b> – the most realistic water ever brought to Vanilla WoW</li>
-<li>🌌<b> Pretty Night Sky</b> – gaze upon the stars like never before</li>
-<li>💃 <b>A Little Extra for Female High Elves, Humans, Night Elves</b> - a custom reshaped body model</li>
-<li>🌄 <b>Fog Pushback </b>– another outstanding mod by VIDOOO, which pushes back Vanilla’s view-distance fog, dramatically extending how far you can see across Azeroth</li>
-<li>🛠️<b> Faithful Upscale</b> – seamlessly merged for a unified HD experience</li>
-<li>🌀 <b>SuperWoW Extra Patch</b> – enables custom textures used by features like Selection Circle Styles</li>
-</ul></font>
         </p>
-        
+
+        <ul class="small">
+          <li>⚜️ <b>Classiic HD Patch</b></li>
+          <li>🪶 <b>VIDOOO’s Ground & Tileset</b> — a stunning reimagining of Azeroth’s terrain</li>
+          <li>💧 <b>Epoch Water</b> — the most realistic water ever brought to Vanilla WoW</li>
+          <li>🌌 <b>Pretty Night Sky</b> — gaze upon the stars like never before</li>
+          <li>💃 <b>A Little Extra for Female High Elves, Humans, Night Elves</b> — a custom reshaped body model</li>
+          <li>🌄 <b>Fog Pushback</b> — pushes back Vanilla’s view-distance fog, dramatically extending how far you can see</li>
+          <li>🛠️ <b>Faithful Upscale</b> — seamlessly merged for a unified HD experience</li>
+          <li>🌀 <b>SuperWoW Extra Patch</b> — enables custom textures used by features like Selection Circle Styles</li>
+        </ul>
       </section>
 
-      <!-- RIGHT COLUMN -->
-      <aside class="box">
-<section id="install">
+      <!-- INSTALL / SUPPORT / CREDITS -->
+      <aside class="box" id="install">
         <h2>⚙️ Important Installation Notes</h2>
         <p class="note">
+          All modules are optional and independent — with a few important exceptions:
+        </p>
 
-All modules are optional and independent — with a few important exceptions:
+        <ul class="small">
+          <li>PATCHES B, D, and E are parts of one large Environment and World Patch. They must be installed together, or not at all, in order to work properly.</li>
+          <li>PATCH-L requires PATCH-A to be installed (mandatory).</li>
+          <li>PATCH-U requires PATCH-A and PATCH-G to be installed (mandatory).</li>
+          <li><strong>VanillaHelpers</strong> is mandatory for the project to operate properly.</li>
+          <li><strong>DXVK</strong> is strongly recommended — and effectively required. It provides a modern Vulkan-based rendering path that greatly improves stability, memory handling, and reliability when using high-resolution textures.</li>
+        </ul>
 
-<ul><font size=-1>
-<li>PATCHES B, D, and E are parts of one large Environment and World Patch. They must be installed together, or not at all, in order to work properly.</li>
-<li>PATCH-L requires PATCH-A to be installed (mandatory).</li>
-<li>PATCH-U requires PATCH-A and PATCH-G to be installed (mandatory).</li>
-<li>  <strong>VanillaHelpers</strong> is mandatory for the project to operate properly.</li>
-<li><strong>DXVK</strong> is strongly recommended — and effectively required. It provides a modern Vulkan-based rendering path that greatly improves stability, memory handling, and reliability when using high-resolution textures.</li>
-        </p></font>
-</ul>
-        <!-- Optional: quick install steps -->
         <div class="divider"></div>
+
         <h2>Installation Guide</h2>
         <ol class="note" style="margin:10px 0 0; padding-left:18px;">
           <li>Install required dependencies (DXVK + Vanilla Helpers).</li>
           <li>Download the desired patch modules and place them inside your Data folder.</li>
-          <li>Install Reshade (optional)</li>
+          <li>Install Reshade (optional).</li>
           <li>Copy my personal Reshade settings and DXVK configuration file into your World of Warcraft main folder.</li>
           <li>Launch the game.</li>
         </ol>
 
-<div class="ctaRow">
-  <a class="btn primary" href="/downloads/">
-    Get Project Reforged
-  </a>
-</div>
+        <div class="ctaRow">
+          <a class="btn primary" href="/downloads/">Get Project Reforged</a>
+        </div>
 
-<div class="divider"></div>
+        <div class="divider"></div>
 
         <h2>❤️ Enjoying Project Reforged?</h2>
         <p class="note">
@@ -537,11 +459,11 @@ All modules are optional and independent — with a few important exceptions:
         <p class="note">
           Contributions support my personal development time and technical research only.
         </p>
+
         <div class="ctaRow">
-          <a class="btn primary" href="https://ko-fi.com/stormhand"><img src="assets/kofi-button.png" width="260">
-    
-  </a>
-</div>
+          <a class="btn primary" href="https://ko-fi.com/stormhand" target="_blank" rel="noreferrer">
+            <img src="assets/kofi-button.png" width="260" alt="Support on Ko-fi">
+          </a>
         </div>
 
         <div class="divider"></div>
@@ -551,14 +473,14 @@ All modules are optional and independent — with a few important exceptions:
           Deep gratitude to everyone who contributed talent, knowledge, and testing feedback to the community.
         </p>
 
-<p class="small">Special thanks to these authors:
-<ul><font size=-1>
-<li>⚜️ Watchers3D – for his guidance and support during my early days helped forge the path that led to this release</li>
-<li>🖌️ Appletrey – for his generosity in allowing full inclusion of assets from Classiic HD Mod</li>
-<li>🧩 Isfir – for his legendary VanillaHelpers mod</li>
-<li>🐾 Vish – for the outstanding Faithful Upscale project</li>
-        </p>
-</font>
+        <p class="small" style="margin-top:10px;"><strong>Special thanks to these authors:</strong></p>
+        <ul class="small">
+          <li>⚜️ Watchers3D — guidance and support during my early days that helped forge the path to this release</li>
+          <li>🖌️ Appletrey — generosity in allowing full inclusion of assets from Classiic HD Mod</li>
+          <li>🧩 Isfir — for the legendary VanillaHelpers mod</li>
+          <li>🐾 Vish — for the outstanding Faithful Upscale project</li>
+        </ul>
+
         <div class="divider"></div>
 
         <h2>Important Note</h2>
@@ -574,10 +496,9 @@ All modules are optional and independent — with a few important exceptions:
     </div>
 
     <footer>
-      <p>
-       <center> Project Reforged - 2026</center>
-      </p>
+      Project Reforged — 2026
     </footer>
+
   </div>
 </body>
-</html> 
+</html>
