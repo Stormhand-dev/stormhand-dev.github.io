@@ -47,10 +47,13 @@
       flex-direction:column;
       gap:10px;
       margin-bottom:14px;
+      align-items:center;
+      text-align:center;
     }
 
     .title{
-      font-size:2.7rem;
+      font-size: clamp(2.8rem, 5vw, 4rem);
+      text-align:center;
       letter-spacing:.6px;
       margin:0;
       margin-bottom:-14px;
@@ -60,6 +63,9 @@
     }
 
     .subtitle{
+      text-align:center;
+      margin-left:auto;
+      margin-right:auto;
       margin:0;
       margin-top:-2px;
       color:var(--muted);
