@@ -280,24 +280,32 @@
   display:inline-flex;
   align-items:center;
   gap:8px;
-  margin-top:10px;
+  margin-top:12px;
+  padding:6px 10px;
+  border-radius:8px;
+  background:rgba(230,177,90,.08);
+  border:1px solid rgba(230,177,90,.18);
   font-size:.92rem;
-  color:var(--muted2);
-  text-decoration:none;
+  color:var(--gold);
   font-weight:700;
+  text-decoration:none;
+  transition:.2s;
 }
 
 .changelog-link:hover{
-  color:var(--gold);
+  background:rgba(230,177,90,.14);
+  border-color:rgba(230,177,90,.35);
+  transform:translateX(2px);
 }
 
 .changelog-link .arrow{
-  transition:transform .2s;
+  transition:.2s;
 }
 
 .changelog-link:hover .arrow{
-  transform:translateX(3px);
+  transform:translateX(4px);
 }
+
 
 
     .center{ text-align:center; }
@@ -364,8 +372,9 @@
   </ul>
 
   <a class="changelog-link" href="/changelog">
-    View Full Patch Notes <span class="arrow">→</span>
-  </a>
+📜 View Full Patch Notes <span class="arrow">→</span>
+</a>
+
 </div>
 
 <p class="small" style="margin-top:12px;">
