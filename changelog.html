@@ -42,35 +42,66 @@
       padding:28px 18px 72px;
     }
 
+    
     header{
       display:flex;
       flex-direction:column;
-      gap:10px;
-      margin-bottom:14px;
+      gap:12px;
+      margin-bottom:18px;
+    }
+
+    .toprow{
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+
+    .brand{
+      display:flex;
+      flex-direction:column;
+      gap:4px;
     }
 
     .title{
-      font-size: 2.8rem;
-      letter-spacing:.6px;
       margin:0;
-      font-weight:750;
+      font-size:3.05rem;
       line-height:1.12;
-      text-wrap:balance;
-      text-align:center;
+      letter-spacing:.2px;
       color:var(--gold);
     }
-    
+
     .subtitle{
       margin:0;
       color:var(--muted);
-      font-size:1.05rem;
+      font-size:1rem;
+      font-weight:700;
       max-width:720px;
-      text-align:center;
-      margin-left:auto;
-      margin-right:auto;
     }
 
-    .divider{
+    .nav{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+    .nav a{
+      border:1px solid var(--border);
+      padding:8px 10px;
+      border-radius:999px;
+      background:rgba(255,255,255,.03);
+      color:var(--muted);
+      font-weight:800;
+      font-size:.9rem;
+      text-decoration:none;
+      transition:.2s;
+    }
+    .nav a:hover{
+      background:rgba(230,177,90,.10);
+      border-color:rgba(230,177,90,.25);
+      color:var(--gold);
+    }
+.divider{
       height:1px;
       opacity:.6;
       background:var(--border);
@@ -78,58 +109,6 @@
     }
 
     /* NAV */
-    .topnav{
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      gap:14px;
-      margin:10px 0 4px;
-      padding:0;
-      border:none;
-      background:none;
-      box-shadow:none;
-    }
-
-    .navlinks{
-      display:flex;
-      gap:14px;
-      flex-wrap:wrap;
-      justify-content:center;
-    }
-
-    .navlinks a{
-      padding:10px 16px;
-      border-radius:999px;
-      border:1px solid rgba(255,255,255,.10);
-      background:rgba(255,255,255,.10);
-      color:var(--muted);
-      font-weight:800;
-      font-size:.95rem;
-      text-decoration:none;
-      transition:.2s;
-    }
-
-    .navlinks a:hover{
-      background:rgba(230,177,90,.10);
-      border-color:rgba(230,177,90,.25);
-      color:var(--gold);
-    }
-
-    .btnGold{
-      padding:10px 18px;
-      border-radius:999px;
-      border:1px solid rgba(230,177,90,.55);
-      color:#1a1408;
-      background:linear-gradient(180deg,#f0c674,#e6b15a);
-      font-weight:900;
-      transition:.25s;
-    }
-
-    .btnGold:hover{
-      transform:translateY(-2px);
-      box-shadow:0 10px 24px rgba(230,177,90,.25);
-    }
-
     /* Layout */
     .box{
       background:var(--panel);
@@ -286,19 +265,21 @@
 <body>
 <div class="wrap">
 <header id="top">
-<h1 class="title">Patch Notes</h1>
-<p class="subtitle">
-        Full release history for <strong>Project Reforged</strong>.
-      </p>
-<nav aria-label="Primary" class="topnav">
-<div class="navlinks">
-<a href="/">← Home</a>
-<a href="/downloads/">Downloads</a>
-<a class="btnGold" href="https://discord.gg/SEU_LINK" rel="noreferrer" target="_blank">Discord</a>
-</div>
-</nav>
-<div class="divider"></div>
-</header>
+      <div class="toprow">
+        <div class="brand">
+          <h1 class="title">Patch Notes</h1>
+          <p class="subtitle">Full release history for <strong>Project Reforged</strong>.</p>
+        </div>
+
+        <div class="nav">
+          <a href="/">← Home</a>
+          <a href="/downloads/">Downloads</a>
+          <a href="https://discord.gg/SEU_LINK" target="_blank" rel="noreferrer">Discord</a>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+    </header>
 <section class="box">
 <h2>📜 Changelog</h2>
 <div class="callout" style="margin-top:12px;">

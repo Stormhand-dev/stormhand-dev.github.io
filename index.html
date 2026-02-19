@@ -309,6 +309,231 @@
 
 
     .center{ text-align:center; }
+
+/* ===== Launcher-style Latest Release ===== */
+.releaseCard{
+  background:linear-gradient(180deg, rgba(255,255,255,.035), rgba(255,255,255,.02));
+  border:1px solid rgba(124,183,255,.20);
+  border-radius:16px;
+  padding:18px;
+}
+
+.releaseTop{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:16px;
+  flex-wrap:wrap;
+}
+
+.releaseMeta{
+  display:grid;
+  gap:6px;
+  min-width:260px;
+}
+
+.metaRow{
+  display:flex;
+  gap:8px;
+  align-items:baseline;
+  color:var(--muted);
+  font-size:.95rem;
+}
+
+.metaRow b{
+  color:var(--text);
+}
+
+.badge{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:6px 10px;
+  border-radius:999px;
+  border:1px solid rgba(230,177,90,.22);
+  background:rgba(230,177,90,.08);
+  color:var(--gold);
+  font-weight:900;
+  font-size:.82rem;
+  letter-spacing:.2px;
+}
+
+.releaseCTA{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-end;
+  gap:10px;
+  min-width:240px;
+}
+
+.btnPrimaryBig{
+  color:#9ccaff; /* levemente mais claro que o original */
+  color: var(--link);
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:14px 20px;
+  border-radius:12px;
+  border:1px solid rgba(124,183,255,.35);
+  background:rgba(124,183,255,.16);
+  font-weight:900;
+  font-size:1.05rem;
+  text-decoration:none;
+  box-shadow: 0 0 0 1px rgba(124,183,255,.25), 
+              0 10px 30px rgba(124,183,255,.15);
+  transition:.2s;
+  white-space:nowrap;
+}
+
+.btnPrimaryBig:hover{
+  transform:translateY(-2px);
+  background:rgba(124,183,255,.22);
+  border-color:rgba(124,183,255,.50);
+}
+
+.releaseHint{
+  color:var(--muted2);
+  font-size:.86rem;
+  text-align:right;
+  max-width:320px;
+}
+
+/* What's New */
+.whatsnew{
+  margin-top:14px;
+  padding-top:14px;
+  border-top:1px solid rgba(255,255,255,.08);
+}
+
+.whatsnew h3{
+  margin:0 0 8px;
+  font-size:1rem;
+  letter-spacing:.2px;
+  color:var(--text);
+}
+
+.whatsnew ul{
+  margin:0;
+  padding-left:18px;
+  color:var(--muted);
+}
+
+.whatsnew li{
+  margin:7px 0;
+}
+
+/* Soft CTA link for Patch Notes */
+.changelog-link{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  margin-top:12px;
+  padding:7px 11px;
+  border-radius:10px;
+  background:rgba(230,177,90,.10);
+  border:1px solid rgba(230,177,90,.22);
+  font-size:.92rem;
+  color:var(--gold);
+  font-weight:900;
+  text-decoration:none;
+  transition:.2s;
+}
+
+.changelog-link:hover{
+  background:rgba(230,177,90,.16);
+  border-color:rgba(230,177,90,.38);
+  transform:translateX(2px);
+}
+
+.changelog-link .arrow{
+  transition:transform .2s;
+}
+
+.changelog-link:hover .arrow{
+  transform:translateX(4px);
+}
+
+/* Mobile alignment */
+@media (max-width: 560px){
+  .releaseCTA{ align-items:stretch; }
+  .releaseHint{ text-align:left; max-width:none; }
+  .btnPrimaryBig{ width:100%; }
+}
+
+
+
+.compare{
+  margin:30px 0;
+  text-align:center;
+}
+
+.compare h2{
+  margin-bottom:16px;
+}
+
+.compare-grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:14px;
+}
+
+@media (min-width:700px){
+  .compare-grid{
+    grid-template-columns:1fr 1fr;
+  }
+}
+
+.compare-card{
+  position:relative;
+  border-radius:14px;
+  overflow:hidden;
+  border:1px solid var(--border);
+  background:rgba(255,255,255,.02);
+}
+
+.compare-card img{
+  width:100%;
+  display:block;
+}
+
+.badge-vanilla{
+  position:absolute;
+  bottom:12px;
+  left:12px;
+  padding:6px 10px;
+  font-size:.75rem;
+  border-radius:999px;
+  background:rgba(0,0,0,.55);
+  color:rgba(255,255,255,.75);
+  border:1px solid rgba(255,255,255,.15);
+  backdrop-filter: blur(4px);
+}
+
+.badge-reforged{
+  position:absolute;
+  bottom:12px;
+  left:12px;
+  padding:6px 12px;
+  font-size:.75rem;
+  border-radius:999px;
+  background:linear-gradient(180deg,#f0c674,#e6b15a);
+  color:#1a1408;
+  font-weight:700;
+  box-shadow:0 6px 16px rgba(230,177,90,.35);
+}
+
+.compare-card.reforged{
+  transform: scale(1.02);
+}
+
+.compare-title{
+  text-align:center;
+  font-size:1.2rem;
+  color:var(--gold);
+  margin:20px 0 4px;  
+  letter-spacing:.5px;
+}
+
   </style>
 </head>
 
@@ -338,6 +563,27 @@
       </nav>
     </header>
 
+<section class="compare">
+
+<p class="compare-title"><b>Vanilla → Reforged
+</p></b>
+
+  <div class="compare-grid">
+
+    <div class="compare-card">
+      <img src="assets/vanilla.jpg" alt="Vanilla UI">
+      <span class="badge-vanilla">Vanilla</span>
+    </div>
+
+    <div class="compare-card">
+      <img src="assets/reforged.jpg" alt="Reforged UI">
+      <span class="badge-reforged">Reforged</span>
+    </div>
+
+  </div>
+
+</section>
+
     <div class="grid">
 
       <!-- MAIN CONTENT -->
@@ -354,34 +600,53 @@
         <div class="divider"></div>
 
         <h2 style="color:var(--gold);">Latest Release</h2>
-        <div class="innerCard">
-          <p style="margin:0 0 6px;"><strong>Version:</strong> <span class="note">vX.X</span></p>
-          <p style="margin:0 0 6px;"><strong>Status:</strong> <span class="note">Stable</span></p>
-          <p style="margin:0;"><strong>Updated:</strong> <span class="note" style="color:var(--gold);"><b>2026-02-15</b></span></p>
 
-          <div class="ctaRow" style="margin-top:14px;">
-  <a class="btn primary" href="/downloads/">Download Latest Version</a>
+<div class="releaseCard">
+
+  <div class="releaseTop">
+
+    <div class="releaseMeta">
+      <div class="badge">⭐ Current Stable</div>
+
+      <div class="metaRow">
+        <b>Version:</b> <span>vX.X</span>
+      </div>
+
+      <div class="metaRow">
+        <b>Status:</b> <span>Stable</span>
+      </div>
+
+      <div class="metaRow">
+        <b>Updated:</b> <span style="color:var(--gold); font-weight:900;">2026-02-15</span>
+      </div>
+    </div>
+
+    <div class="releaseCTA">
+      <a class="btnPrimaryBig" href="/downloads/">
+        Download Latest Version
+      </a>
+
+      <div class="releaseHint">
+        <b>Installation Notice:</b> Please review the installation notes below for the best experience.
+      </div>
+    </div>
+
+  </div>
+
+  <div class="whatsnew">
+    <h3>What’s New in vX.X</h3>
+    <ul>
+      <li>Massive environment texture overhaul</li>
+      <li>Improved memory handling &amp; stability (DXVK recommended)</li>
+      <li>New spell visual effects + updated interface elements</li>
+    </ul>
+
+    <a class="changelog-link" href="/changelog">
+      📜 Read Full Patch Notes <span class="arrow">→</span>
+    </a>
+  </div>
+
 </div>
-
-<div class="whatsnew">
-  <h3>What’s New in vX.X</h3>
-  <ul>
-    <li>Massive environment texture overhaul</li>
-    <li>Improved memory handling & stability (DXVK recommended)</li>
-    <li>New spell visual effects + updated interface elements</li>
-  </ul>
-
-  <a class="changelog-link" href="/changelog">
-📜 View Full Patch Notes <span class="arrow">→</span>
-</a>
- 
-</div>
-<br>
-<p class="small" style="margin-top:12px;">
-  <font size=-1><strong>Installation Notice:</strong><br>
-  For the best experience, take a moment to review the information and installation guidelines below before downloading.
-</p></font>
-
 
        <div class="divider"></div>
 

@@ -19,7 +19,10 @@
       --border:rgba(255,255,255,.10);
       --shadow: 0 10px 30px rgba(0,0,0,.35);
       --radius:14px;
-      --max: 980px;
+
+      /* match Home feel */
+      --max: 760px;
+
       --ok: rgba(124,183,255,.16);
       --warn: rgba(240,198,116,.14);
       --danger: rgba(255,120,120,.14);
@@ -40,7 +43,7 @@
     .wrap{
       max-width:var(--max);
       margin:0 auto;
-      padding:42px 18px 72px;
+      padding:28px 18px 72px;
     }
 
     header{
@@ -52,7 +55,7 @@
 
     .toprow{
       display:flex;
-      align-items:center;
+      align-items:flex-start;
       justify-content:space-between;
       gap:12px;
       flex-wrap:wrap;
@@ -66,7 +69,7 @@
 
     .title{
       margin:0;
-      font-size:2.05rem;
+      font-size:3.05rem;
       line-height:1.12;
       letter-spacing:.2px;
       color:var(--gold);
@@ -105,6 +108,7 @@
       margin:0;
     }
 
+    /* ✅ SINGLE COLUMN ALWAYS */
     .grid{
       display:grid;
       grid-template-columns: 1fr;
@@ -113,7 +117,7 @@
     }
 
     .sectionTitle{
-      margin:18px 0 10px;
+      margin:22px 0 10px;
       font-size:1.05rem;
       letter-spacing:.2px;
       color:var(--muted);
@@ -148,6 +152,7 @@
       display:flex;
       gap:8px;
       flex-wrap:wrap;
+      justify-content:flex-end;
     }
 
     .tag{
@@ -158,6 +163,7 @@
       color:var(--muted2);
       background:rgba(255,255,255,.03);
       font-weight:800;
+      white-space:nowrap;
     }
 
     .tag.ok{ background:var(--ok); border-color:rgba(124,183,255,.28); color:rgba(234,234,234,.88); }
@@ -189,6 +195,7 @@
     .btn.primary{
       background:rgba(124,183,255,.14);
       border-color:rgba(124,183,255,.30);
+      color: var(--link);
     }
 
     .subchoices{
@@ -198,6 +205,7 @@
       border-radius:12px;
       padding:12px;
     }
+
     .choice{
       display:flex;
       align-items:center;
@@ -208,6 +216,7 @@
       border:1px solid rgba(255,255,255,.08);
       background:rgba(0,0,0,.18);
       margin-top:10px;
+      flex-wrap:wrap;
     }
     .choice:first-child{ margin-top:0; }
     .choice b{ font-weight:950; }
@@ -232,10 +241,6 @@
       font-size:.9rem;
       text-align:center;
     }
-
-    @media (min-width: 820px){
-      .grid{ grid-template-columns: 1fr 1fr; }
-    }
   </style>
 </head>
 
@@ -246,15 +251,13 @@
       <div class="toprow">
         <div class="brand">
           <h1 class="title">Downloads</h1>
-          <p class="subtitle">Project Reforged — Modular patch library</p>
+          <p class="subtitle">Project Reforged — Modular Patch Library</p>
         </div>
 
         <div class="nav">
           <a href="/">← Home</a>
-          <a href="#core">Core</a>
-          <a href="#optional">Optional</a>
-          <a href="#audio">Audio</a>
-          <a href="#ultra">Ultra</a>
+          <a class="support-btn" href="#support">Support</a>
+          <a href="https://discord.gg/SEU_LINK" target="_blank" rel="noreferrer">Discord</a>
         </div>
       </div>
 
@@ -273,13 +276,10 @@
     <div id="core" class="sectionTitle">Core Modules</div>
     <div class="grid">
 
-      <!-- A -->
       <section class="card">
         <div class="cardHead">
           <h2 class="patchName">🧙‍♂️ PATCH-A — Player Characters & NPCs</h2>
-          <div class="patchMeta">
-            <span class="tag ok">Core</span>
-          </div>
+          <div class="patchMeta"><span class="tag ok">Core</span></div>
         </div>
         <p class="desc">Core character/NPC visuals and foundations used by other modules.</p>
         <div class="ctaRow">
@@ -287,13 +287,10 @@
         </div>
       </section>
 
-      <!-- B -->
       <section class="card">
         <div class="cardHead">
           <h2 class="patchName">🏰 PATCH-B — Buildings</h2>
-          <div class="patchMeta">
-            <span class="tag warn">Install with D + E</span>
-          </div>
+          <div class="patchMeta"><span class="tag warn">Install with D + E</span></div>
         </div>
         <p class="desc">Part of the Environment & World set.</p>
         <div class="ctaRow">
@@ -301,13 +298,10 @@
         </div>
       </section>
 
-      <!-- C -->
       <section class="card">
         <div class="cardHead">
           <h2 class="patchName">🐉 PATCH-C — Creatures</h2>
-          <div class="patchMeta">
-            <span class="tag ok">Core</span>
-          </div>
+          <div class="patchMeta"><span class="tag ok">Core</span></div>
         </div>
         <p class="desc">Creatures and related assets for the classic client.</p>
         <div class="ctaRow">
@@ -315,42 +309,35 @@
         </div>
       </section>
 
-      <!-- D -->
       <section class="card">
         <div class="cardHead">
           <h2 class="patchName">🌿 PATCH-D — Doodads</h2>
           <div class="patchMeta">
             <span class="tag warn">Install with B + E</span>
-            <span class="tag">Includes Fog Push-back</span>
           </div>
         </div>
-        <p class="desc">World doodads + Fog Push-back integration.</p>
+        <p class="desc">World doodads + Textures.</p>
         <div class="ctaRow">
           <a class="btn primary" href="https://www.mediafire.com/file/et71nipm...D.mpq/file">Download</a>
         </div>
       </section>
 
-      <!-- E -->
       <section class="card">
         <div class="cardHead">
           <h2 class="patchName">🌄 PATCH-E — Environment</h2>
-          <div class="patchMeta">
-            <span class="tag warn">Install with B + D</span>
-          </div>
+          <div class="patchMeta"><span class="tag warn">Install with B + D</span>            <span class="tag">Includes Fog Push-back</span>
+</div>
         </div>
-        <p class="desc">Environment textures and world visuals.</p>
+        <p class="desc">Environment textures and world visuals + Fog Push-back integration.</p>
         <div class="ctaRow">
           <a class="btn primary" href="https://www.mediafire.com/file/33g9gjeb...E.mpq/file">Download</a>
         </div>
       </section>
 
-      <!-- G -->
       <section class="card">
         <div class="cardHead">
           <h2 class="patchName">⚔️ PATCH-G — Gear & Weapons</h2>
-          <div class="patchMeta">
-            <span class="tag ok">Core</span>
-          </div>
+          <div class="patchMeta"><span class="tag ok">Core</span></div>
         </div>
         <p class="desc">Gear and weapon visuals used by multiple enhancements.</p>
         <div class="ctaRow">
@@ -358,13 +345,10 @@
         </div>
       </section>
 
-      <!-- I -->
       <section class="card">
         <div class="cardHead">
           <h2 class="patchName">🧭 PATCH-I — Interface</h2>
-          <div class="patchMeta">
-            <span class="tag">Includes custom selection circle textures</span>
-          </div>
+          <div class="patchMeta"><span class="tag">Includes custom selection circle textures</span></div>
         </div>
         <p class="desc">Interface visuals + SuperWoW selection circle texture support.</p>
         <div class="ctaRow">
@@ -372,13 +356,10 @@
         </div>
       </section>
 
-      <!-- L -->
       <section class="card">
         <div class="cardHead">
           <h2 class="patchName">💃 PATCH-L — A Little Extra for Females</h2>
-          <div class="patchMeta">
-            <span class="tag warn">Requires PATCH-A</span>
-          </div>
+          <div class="patchMeta"><span class="tag warn">Requires PATCH-A</span></div>
         </div>
         <p class="desc">Optional body model enhancement. Choose one variant.</p>
 
@@ -405,13 +386,10 @@
         </div>
       </section>
 
-      <!-- M -->
       <section class="card">
         <div class="cardHead">
           <h2 class="patchName">🗺️ PATCH-M — Maps & Loading Screens</h2>
-          <div class="patchMeta">
-            <span class="tag">Optional</span>
-          </div>
+          <div class="patchMeta"><span class="tag">Optional</span></div>
         </div>
         <p class="desc">Enhanced maps and loading screens.</p>
         <div class="ctaRow">
@@ -425,13 +403,10 @@
     <div id="optional" class="sectionTitle">Optional Enhancements</div>
     <div class="grid">
 
-      <!-- N -->
       <section class="card">
         <div class="cardHead">
           <h2 class="patchName">🌑 PATCH-N — Darker Nights</h2>
-          <div class="patchMeta">
-            <span class="tag">Optional</span>
-          </div>
+          <div class="patchMeta"><span class="tag">Optional</span></div>
         </div>
         <p class="desc">Darker nights for a more atmospheric experience.</p>
         <div class="ctaRow">
@@ -439,7 +414,6 @@
         </div>
       </section>
 
-      <!-- O -->
       <section class="card">
         <div class="cardHead">
           <h2 class="patchName">🔥 PATCH-O — Raid Visuals (Compatible Build)</h2>
@@ -457,13 +431,10 @@
         </div>
       </section>
 
-      <!-- V -->
       <section class="card">
         <div class="cardHead">
           <h2 class="patchName">✨ PATCH-V — Spell Visual Effects</h2>
-          <div class="patchMeta">
-            <span class="tag">Optional</span>
-          </div>
+          <div class="patchMeta"><span class="tag">Optional</span></div>
         </div>
         <p class="desc">Spell visuals and effect enhancements.</p>
         <div class="ctaRow">
@@ -477,13 +448,10 @@
     <div id="audio" class="sectionTitle">Audio</div>
     <div class="grid">
 
-      <!-- S -->
       <section class="card">
         <div class="cardHead">
           <h2 class="patchName">🎵 PATCH-S — Sounds & Music</h2>
-          <div class="patchMeta">
-            <span class="tag">Optional</span>
-          </div>
+          <div class="patchMeta"><span class="tag">Optional</span></div>
         </div>
         <p class="desc">Sounds and music enhancements.</p>
         <div class="ctaRow">
@@ -497,7 +465,6 @@
     <div id="ultra" class="sectionTitle">Ultra Tier</div>
     <div class="grid">
 
-      <!-- U -->
       <section class="card">
         <div class="cardHead">
           <h2 class="patchName">💎 PATCH-U — Ultra HD Character Textures & Gear</h2>
