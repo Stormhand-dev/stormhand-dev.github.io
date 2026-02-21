@@ -256,25 +256,108 @@
 
         <div class="nav">
           <a href="/">← Home</a>
-          <a class="support-btn" href="#support">Support</a>
-          <a href="https://discord.gg/SEU_LINK" target="_blank" rel="noreferrer">Discord</a>
+          <a class="support-btn" href="https://ko-fi.com/projectreforged" target="_blank">Support</a>
+          <a href="https://discord.gg/JCXtVUAF" target="_blank" rel="noreferrer">Discord</a>
         </div>
       </div>
 
       <div class="divider"></div>
 
       <p class="note">
-        Each module is an individual <b>.mpq</b>. Install only what you want — but respect the dependency notes below.
+        Project Reforged is fully modular — install only what you need, with each component designed to work independently.
       </p>
 
-      <div class="banner">
+      
+    </header>
+
+
+<div id="dependencies" class="sectionTitle">Dependencies</div>
+
+<p class="small" style="margin-top:-6px;">
+Install these first. Required for proper functionality.
+</p>
+
+<div class="grid">
+
+  <!-- VANILLA HELPERS -->
+  <section class="card">
+    <div class="cardHead">
+      <h2 class="patchName">🧩 VanillaHelpers — Mandatory</h2>
+      <div class="patchMeta">
+        <span class="tag danger">Required</span>
+        <span class="tag">Core Dependency</span>
+      </div>
+    </div>
+
+    <p class="desc">
+      <b>VanillaHelpers</b> is required for Project Reforged to function properly.
+    </p>
+
+    <div class="subchoices">
+      <div class="choice">
+        <div>
+          <b>Download VanillaHelpers</b>
+          <div class="small">Latest release from the official repository.</div>
+        </div>
+        <a class="btn primary" href="https://github.com/isfir/VanillaHelpers/releases" target="_blank" rel="noreferrer">Open Releases</a>
+      </div>
+
+      <p class="note" style="margin-top:10px;">
+        Installation: download <b>VanillaHelpers.dll</b> → copy it into your main <b>World of Warcraft</b> folder.
+      </p>
+    </div>
+  </section>
+
+  <!-- DXVK -->
+  <section class="card">
+    <div class="cardHead">
+      <h2 class="patchName">⚙️ DXVK — Optional</h2>
+      <div class="patchMeta">
+        <span class="tag ok">Optional</span>
+        <span class="tag">Rendering</span>
+      </div>
+    </div>
+
+    <p class="desc">
+      DXVK improves the Direct3D 9 rendering pipeline, providing better stability and compatibility, especially when using ReShade.
+    </p>
+
+    <div class="subchoices">
+      <div class="choice">
+        <div>
+          <b>DXVK 2.7.1</b>
+          <div class="small">Latest recommended version</div>
+        </div>
+        <a class="btn primary" href="https://github.com/doitsujin/dxvk/releases/tag/v2.7.1" target="_blank" rel="noreferrer">Open Release</a>
+      </div>
+
+      <div class="choice">
+        <div>
+          <b>DXVK 2.5.3</b>
+          <div class="small">Alternative / fallback version</div>
+        </div>
+        <a class="btn primary" href="https://github.com/doitsujin/dxvk/releases/tag/v2.5.3" target="_blank" rel="noreferrer">Open Release</a>
+      </div>
+
+      <p class="note" style="margin-top:10px;">
+        Installation: extract DXVK → open the folder → go to <b>x32</b> → copy <b>d3d9.dll</b> into your World of Warcraft folder.
+      </p>
+    </div>
+  </section>
+
+</div>
+
+<br>
+<div class="banner">
         <b>Important:</b> Patches <b>B + D + E</b> are one large environment/world set. Install them together (or not at all).
       </div>
-    </header>
+
+<br>
 
     <!-- CORE -->
     <div id="core" class="sectionTitle">Core Modules</div>
     <div class="grid">
+
 
       <section class="card">
         <div class="cardHead">

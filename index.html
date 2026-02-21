@@ -7,6 +7,7 @@
   <meta name="description" content="Project Reforged — A High-Definition Visual Framework for the Classic Client" />
 
   <style>
+    /* ================= Base ================= */
     :root{
       --bg:#080808;
       --panel:#141414;
@@ -36,22 +37,26 @@
     a{ color:var(--link); text-decoration:none; font-weight:600; }
     a:hover{ opacity:.85; }
 
+
+    /* ================= Typography ================= */
     .wrap{
       max-width:var(--max);
       margin:0 auto;
       padding:28px 18px 72px;
     }
 
+
+    /* ================= Misc ================= */
     header{
       display:flex;
       flex-direction:column;
       gap:10px;
       margin-bottom:14px;
-      
+
     }
 
     .title{
-      font-size:3.4rem;
+      font-size:1.8rem;
       letter-spacing:.6px;
       margin:0;
       margin-bottom:0px;
@@ -64,18 +69,22 @@
       margin:0;
       margin-top:-2px;
       color:var(--muted);
-      font-size:0.95rem;
+      font-size:0.85rem;
       max-width:720px;
     }
 
+
+    /* ================= Layout ================= */
     .divider{
       height:1px;
       opacity:.6;
       background:var(--border);
-      margin:10px 0 14px;
+      margin:20px 0 20px;
     }
 
-    /* NAV */
+
+
+    /* ================= Typography ================= */
     .topnav{
       display:flex;
       align-items:center;
@@ -89,6 +98,8 @@
       position:static;
     }
 
+
+    /* ================= Header & Hero ================= */
     .navlinks{
       display:flex;
       gap:14px;
@@ -114,6 +125,8 @@
       color:var(--gold);
     }
 
+
+    /* ================= Typography ================= */
     .support-btn{
       padding:10px 18px;
       border-radius:999px;
@@ -126,18 +139,24 @@
 
     .support-btn:hover{
       transform:translateY(-2px);
-      box-shadow:0 10px 24px rgba(230,177,90,.25);
+      box-shadow:0 5px 24px rgba(230,177,90,.25);
     }
 
-    /* 1-COLUMN LAYOUT (guaranteed) */
+
+
+    /* ================= Layout ================= */
     .grid{
       display:flex;
       flex-direction:column;
       gap:16px;
     }
 
+
+    /* ================= Misc ================= */
     section, aside{ width:100%; }
 
+
+    /* ================= Cards ================= */
     .box{
       background:var(--panel);
       border:1px solid var(--border);
@@ -146,6 +165,8 @@
       box-shadow:var(--shadow);
     }
 
+
+    /* ================= Typography ================= */
     h2{
       margin:0 0 10px;
       font-size:1.35rem;
@@ -155,6 +176,8 @@
     p{ margin:0 0 10px; }
     p:last-child{ margin-bottom:0; }
 
+
+    /* ================= Misc ================= */
     ul{
       margin:10px 0 0;
       padding-left:18px;
@@ -174,6 +197,8 @@
       width:100%;
     }
 
+
+    /* ================= Buttons ================= */
     .btn{
       display:inline-block;
       padding:10px 14px;
@@ -184,22 +209,30 @@
       font-weight:800;
     }
 
+
+    /* ================= Typography ================= */
     .btn.primary{
       background:rgba(124,183,255,.14);
       border-color:rgba(124,183,255,.30);
     }
 
+
+    /* ================= Misc ================= */
     .note{
       color:var(--muted2);
       font-size:.95rem;
     }
 
+
+    /* ================= Typography ================= */
     .small{
       color:var(--muted2);
       font-size:.9rem;
     }
 
-    /* Optional screenshot gallery */
+
+
+    /* ================= Preview Gallery ================= */
     .shots{
       display:grid;
       grid-template-columns:1fr;
@@ -207,7 +240,11 @@
       margin-top:12px;
     }
 
+
+    /* ================= Responsive ================= */
     @media (min-width:700px){
+
+    /* ================= Preview Gallery ================= */
       .shots{ grid-template-columns:1fr 1fr; }
     }
 
@@ -224,12 +261,16 @@
       display:block;
     }
 
+
+    /* ================= Typography ================= */
     .shot .cap{
       padding:10px 12px;
       color:var(--muted2);
       font-size:.9rem;
     }
 
+
+    /* ================= Misc ================= */
     footer{
       margin-top:18px;
       color:var(--muted2);
@@ -237,7 +278,7 @@
       text-align:center;
     }
 
-    /* Small tweaks */
+
     .innerCard{
       background:rgba(255,255,255,.03);
       border:1px solid rgba(124,183,255,.25);
@@ -252,13 +293,15 @@
       border-radius:14px;
     }
 
-    /* Latest Release: "What's New" + Changelog link */
+
 .whatsnew{
   margin-top:14px;
   padding-top:12px;
   border-top:1px solid rgba(255,255,255,.08);
 }
 
+
+    /* ================= Typography ================= */
 .whatsnew h3{
   margin:0 0 8px;
   font-size:1rem;
@@ -266,6 +309,8 @@
   color:var(--text);
 }
 
+
+    /* ================= Misc ================= */
 .whatsnew ul{
   margin:0;
   padding-left:18px;
@@ -307,10 +352,9 @@
 }
 
 
-
     .center{ text-align:center; }
 
-/* ===== Launcher-style Latest Release ===== */
+
 .releaseCard{
   background:linear-gradient(180deg, rgba(255,255,255,.035), rgba(255,255,255,.02));
   border:1px solid rgba(124,183,255,.20);
@@ -318,6 +362,8 @@
   padding:18px;
 }
 
+
+    /* ================= Typography ================= */
 .releaseTop{
   display:flex;
   align-items:flex-start;
@@ -326,6 +372,8 @@
   flex-wrap:wrap;
 }
 
+
+    /* ================= Misc ================= */
 .releaseMeta{
   display:grid;
   gap:6px;
@@ -366,8 +414,10 @@
   min-width:240px;
 }
 
+
+    /* ================= Buttons ================= */
 .btnPrimaryBig{
-  color:#9ccaff; /* levemente mais claro que o original */
+  color:#9ccaff;
   color: var(--link);
   display:inline-flex;
   align-items:center;
@@ -379,7 +429,7 @@
   font-weight:900;
   font-size:1.05rem;
   text-decoration:none;
-  box-shadow: 0 0 0 1px rgba(124,183,255,.25), 
+  box-shadow: 0 0 0 1px rgba(124,183,255,.25),
               0 10px 30px rgba(124,183,255,.15);
   transition:.2s;
   white-space:nowrap;
@@ -391,6 +441,8 @@
   border-color:rgba(124,183,255,.50);
 }
 
+
+    /* ================= Misc ================= */
 .releaseHint{
   color:var(--muted2);
   font-size:.86rem;
@@ -398,13 +450,15 @@
   max-width:320px;
 }
 
-/* What's New */
+
 .whatsnew{
   margin-top:14px;
   padding-top:14px;
   border-top:1px solid rgba(255,255,255,.08);
 }
 
+
+    /* ================= Typography ================= */
 .whatsnew h3{
   margin:0 0 8px;
   font-size:1rem;
@@ -412,6 +466,8 @@
   color:var(--text);
 }
 
+
+    /* ================= Misc ================= */
 .whatsnew ul{
   margin:0;
   padding-left:18px;
@@ -422,7 +478,7 @@
   margin:7px 0;
 }
 
-/* Soft CTA link for Patch Notes */
+
 .changelog-link{
   display:inline-flex;
   align-items:center;
@@ -453,15 +509,20 @@
   transform:translateX(4px);
 }
 
-/* Mobile alignment */
+
+    /* ================= Responsive ================= */
 @media (max-width: 560px){
+
+    /* ================= Misc ================= */
   .releaseCTA{ align-items:stretch; }
   .releaseHint{ text-align:left; max-width:none; }
+
+    /* ================= Buttons ================= */
   .btnPrimaryBig{ width:100%; }
 }
 
 
-
+    /* ================= Typography ================= */
 .compare{
   margin:30px 0;
   text-align:center;
@@ -477,7 +538,11 @@
   gap:14px;
 }
 
+
+    /* ================= Responsive ================= */
 @media (min-width:700px){
+
+    /* ================= Typography ================= */
   .compare-grid{
     grid-template-columns:1fr 1fr;
   }
@@ -496,6 +561,8 @@
   display:block;
 }
 
+
+    /* ================= Misc ================= */
 .badge-vanilla{
   position:absolute;
   bottom:12px;
@@ -522,6 +589,8 @@
   box-shadow:0 6px 16px rgba(230,177,90,.35);
 }
 
+
+    /* ================= Typography ================= */
 .compare-card.reforged{
   transform: scale(1.02);
 }
@@ -530,22 +599,592 @@
   text-align:center;
   font-size:1.2rem;
   color:var(--gold);
-  margin:20px 0 4px;  
+  margin:20px 0 4px;
   letter-spacing:.5px;
 }
 
-  </style>
+
+.premium{
+  padding: 56px 0;
+  position: relative;
+}
+
+.premium__inner{
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+
+.premium__inner::before{
+  content:"";
+  display:block;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,.18), transparent);
+  margin-bottom: 22px;
+}
+
+.premium__badge{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 14px;
+  border-radius: 999px;
+
+  font-size: 12px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+
+  color: rgba(255,255,255,.92);
+  border: 1px solid rgba(255,255,255,.14);
+  background: rgba(255,255,255,.05);
+
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,.05),
+    0 12px 30px rgba(0,0,0,.35);
+}
+
+
+.premium__badge::before{
+  content:"";
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: rgba(245, 197, 66, .9);
+  box-shadow: 0 0 14px rgba(245, 197, 66, .35);
+}
+
+.premium__head{
+  display: grid;
+  justify-items: center;
+  gap: 10px;
+}
+
+.premium__title{
+  margin: 12px 0 8px;
+  font-size: clamp(22px, 3vw, 34px);
+  line-height: 1.1;
+}
+
+.premium__subtitle{
+  margin: 0 auto;
+  max-width: 720px;
+  opacity: .86;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.premium__subtitleBreak{
+  display: block;
+  margin-top: 6px;
+  opacity: .9;
+}
+
+.premium__grid{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  margin-top: 18px;
+}
+
+
+.premiumCard{
+  position: relative;
+  border-radius: 16px;
+  padding: 16px 16px 14px;
+  border: 1px solid rgba(255,255,255,.12);
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,0.06) 0%,
+    rgba(255,255,255,0.02) 100%
+  );
+  backdrop-filter: blur(10px);
+  border-color: rgba(255,255,255,.22);
+  -webkit-backdrop-filter: blur(10px);
+  transition: transform .18s ease, background .18s ease, border-color .18s ease;
+display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.premiumCard--featured{
+  position: relative;
+  border-radius: 16px;
+  padding: 16px 16px 14px;
+  border: 1px solid rgba(255,255,255,.12);
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,0.06) 0%,
+    rgba(255,255,255,0.02) 100%
+  );
+  backdrop-filter: blur(10px);
+  border-color: rgba(255,255,255,.22);
+  -webkit-backdrop-filter: blur(10px);
+  transition: transform .18s ease, background .18s ease, border-color .18s ease;
+
+}
+
+.premiumCard::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:16px;
+  pointer-events:none;
+  background: radial-gradient(800px 140px at 50% 0%, rgba(255,255,255,.08), transparent 60%);
+  opacity:.9;
+}
+
+.premiumCard:hover{
+  transform: translateY(-2px);
+  background: rgba(255,255,255,.05);
+  border-color: rgba(255,255,255,.18);
+
+}
+
+
+.premiumCard:hover .icon{
+  stroke: var(--accent, #f5c542);
+}
+
+
+.premiumCard:hover .premiumCard__icon{
+  border-color: rgba(245, 197, 66, 0.28);
+  background: rgba(245, 197, 66, 0.06);
+}
+
+
+.premiumCard__icon{
+  width: 58px;
+  height: 58px;
+  border-radius: 14px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.18);
+  margin: 0 auto 12px;
+
+
+}
+
+.premiumCard__title{
+  margin: 0 0 6px;
+  font-size: 16px;
+  line-height: 1.2;
+  text-align: center;
+
+}
+
+.premiumCard__text{
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.45;
+  opacity: .85;
+}
+
+
+.premium__value{
+  margin-top: 16px;
+  border-radius: 18px;
+  padding: 16px;
+  border: 1px solid rgba(255,255,255,.12);
+  background: rgba(255,255,255,.03);
+}
+
+.premium__valueLine{
+  margin: 0 0 10px;
+  font-size: 14px;
+  opacity: .9;
+}
+
+.premium__checks{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 14px;
+  margin: 0 0 14px;
+  padding: 0;
+  list-style: none;
+  opacity: .88;
+  font-size: 13px;
+}
+
+.premium__checks li{
+  display:flex;
+  align-items:center;
+  gap: 8px;
+}
+
+.premium__checks li::before{
+  content:"✔";
+  opacity: .85;
+  font-size: 12px;
+}
+
+.premium__ctaRow{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+
+    /* ================= Buttons ================= */
+.btnPremium{
+  font-size: 1.6rem;
+  margin: 14px 14px 14px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding: 13px 22px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,.18);
+  background: rgba(255,255,255,.06);
+  text-decoration:none;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  transition: transform .18s ease, background .18s ease, border-color .18s ease;
+background: linear-gradient(
+    180deg,
+    rgba(255,255,255,.06) 0%,
+    rgba(255,255,255,.02) 100%
+  );  border: 1px solid rgba(245, 197, 66, .5);
+  color: rgba(255,255,255,.95);
+
+  box-shadow: 0 0 0 1px rgba(245,197,66,.12),
+              0 8px 24px rgba(0,0,0,.35);
+}
+
+.btnPremium:hover{
+  transform: translateY(-1px);
+  background: rgba(255,255,255,.09);
+  border-color: rgba(255,255,255,.26);
+background: rgba(245,197,66,.08);
+  border-color: rgba(245,197,66,.8);
+  box-shadow: 0 0 18px rgba(245,197,66,.25),
+              0 12px 30px rgba(0,0,0,.45);
+}
+
+
+    /* ================= Typography ================= */
+.premium__ctaNote{
+  font-size: 12px;
+  opacity: .75;
+}
+
+
+    /* ================= Responsive ================= */
+@media (min-width: 860px){
+
+    /* ================= Typography ================= */
+  .premium__grid{
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  .premiumCard{
+    padding: 18px;
+  }
+
+  .premium__value{
+  margin-top: 22px;
+  border-radius: 18px;
+  padding: 20px;
+  border: 1px solid rgba(255,255,255,.12);
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,.04) 0%,
+    rgba(255,255,255,.02) 100%
+  );
+}
+
+.premium__valueLine{
+  margin: 0 0 14px;
+  font-size: 15px;
+  color: rgba(255,255,255,.88);
+}
+
+.premium__valueLine strong{
+  color: rgba(255,255,255,.98);
+}
+
+.premium__checks{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 16px;
+  margin: 0 0 16px;
+  padding: 0;
+  list-style: none;
+
+  font-size: 13px;
+  color: rgba(255,255,255,.74);
+}
+
+.premium__checks li{
+  display:flex;
+  align-items:center;
+  gap: 8px;
+}
+
+.premium__checks li::before{
+  content:"✔";
+  color: rgba(245, 197, 66, .85);
+  opacity: 1;
+}
+
+
+.premium__ctaRow{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 14px;
+}
+
+.premium__ctaNote{
+  font-size: 12px;
+  color: rgba(255,255,255,.60);
+
+}
+
+
+    /* ================= Misc ================= */
+.icon{
+  width: 56px;
+  height: 56px;
+  stroke: rgba(255,255,255,.92);
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+
+}
+
+
+    /* ================= Typography ================= */
+.premium__kicker{
+  margin: 10px 0 6px;
+  font-size: 18px;
+  line-height: 1.45;
+  color: rgba(255,255,255,.88);
+}
+
+.premium__subkicker{
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.5;
+  color: rgba(255,255,255,.70);
+}
+
+
+    /* ================= Header & Hero ================= */
+.heroImage{
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 36px;
+}
+
+.heroImage img{
+  width: 100%;
+  display: block;
+}
+
+
+.heroImage::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background:
+
+    radial-gradient(
+      ellipse at center,
+      rgba(0,0,0,0) 55%,
+      rgba(0,0,0,0.6) 85%,
+      #0b0b0b 100%
+    ),
+
+
+    linear-gradient(
+      to bottom,
+      rgba(0,0,0,0) 80%,
+      #0b0b0b 100%
+    );
+}
+
+
+    /* ================= Preview Gallery ================= */
+.shotsGrid{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 14px;
+}
+
+.shot{
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 16px;
+  overflow: hidden;
+  background: rgba(255,255,255,.04);
+}
+
+.shot img{
+  width: 100%;
+  display: block;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+
+    /* ================= Typography ================= */
+.cap{
+  padding: 12px 14px;
+  font-size: 13px;
+  color: rgba(255,255,255,.78);
+  border-top: 1px solid rgba(255,255,255,.10);
+}
+
+
+    /* ================= Responsive ================= */
+@media (max-width: 860px){
+
+    /* ================= Preview Gallery ================= */
+  .shotsGrid{
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.shot{
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.shot img{
+  width: 100%;
+  display: block;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  transition: transform .4s ease;
+}
+
+
+.shot:hover img{
+  transform: scale(1.03);
+}
+
+
+.shot::after{
+  content: attr(data-caption);
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 12px 14px;
+
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,.75),
+    rgba(0,0,0,0)
+  );
+
+  font-size: 13px;
+  color: rgba(255,255,255,.9);
+
+  opacity: 0;
+  transition: opacity .25s ease;
+}
+
+
+.shot:hover::after{
+  opacity: 1;
+}
+
+
+    /* ================= Typography ================= */
+.supportLogoWrap{
+  position: relative;
+  display: block;
+  margin: 32px auto 0;
+
+  animation: breathe 2.6s ease-in-out infinite;
+}
+
+.supportLogoWrap::before{
+  content: "";
+  position: absolute;
+  inset: -3%;
+  border-radius: 20%;
+
+  background: radial-gradient(
+    circle,
+    rgba(255,140,0,.22) 0%,
+    rgba(255,140,0,.10) 35%,
+    rgba(255,140,0,.04) 55%,
+    transparent 70%
+  );
+
+  filter: blur(6px);
+  opacity: 0.35;
+
+  transition: opacity .25s ease;
+  z-index: -1;
+}
+
+
+.supportLogoWrap:hover::before{
+  opacity: 0.45;
+}
+
+
+.supportLogo{
+  width: 180px;
+  display: block;
+  margin: 0 auto;
+
+  filter:
+    drop-shadow(0 10px 30px rgba(0,0,0,.6))
+    drop-shadow(0 0 16px rgba(255,140,0,.12));
+
+  transition: transform .25s ease;
+}
+
+
+.supportLogoWrap:hover .supportLogo{
+  transform: scale(1.04);
+}
+
+
+    /* ================= Animations ================= */
+@keyframes breathe{
+
+    /* ================= Misc ================= */
+  0%,100%{ transform: scale(1); }
+  50%{ transform: scale(1.04); }
+}
+
+
+</style>
+
 </head>
+
 
 <body>
   <div class="wrap">
 
-    <!-- HERO -->
+
     <header>
+
+<div class="heroImage">
+  <img src="assets/logo.png" alt="Project Reforged">
+</div>
+
       <h1 class="title" style="color:var(--gold);">Project Reforged</h1>
 
       <p class="subtitle">
-        <strong><font size=+1>A High-Definition Visual Framework for World of Warcraft® Classic</strong></font>
+        <strong>A High-Definition Visual Framework for World of Warcraft® Classic</strong>
       </p>
 
       <div class="divider"></div>
@@ -556,9 +1195,9 @@
 
       <nav class="topnav" aria-label="Primary">
         <div class="navlinks">
-          <a href="#install">Install</a>
+          <a class="support-btn" href="#install">Install</a>
           <a class="support-btn" href="#support">Support</a>
-          <a href="https://discord.gg/SEU_LINK" target="_blank" rel="noreferrer">Discord</a>
+          <a class="support-btn" href="https://discord.gg/JCXtVUAF" target="_blank" rel="noreferrer">Discord</a>
         </div>
       </nav>
     </header>
@@ -586,7 +1225,7 @@
 
     <div class="grid">
 
-      <!-- MAIN CONTENT -->
+
       <section class="box">
         <h2>What is Project Reforged</h2>
         <p>
@@ -597,7 +1236,7 @@
           This work involves carefully restructuring, converting, and integrating high-definition visual elements so they function smoothly within the original engine — always prioritizing stability, immersion, and consistency.
         </p>
 
-        <div class="divider"></div>
+        <div class="divider" id="install"></div>
 
         <h2 style="color:var(--gold);">Latest Release</h2>
 
@@ -609,7 +1248,7 @@
       <div class="badge">⭐ Current Stable</div>
 
       <div class="metaRow">
-        <b>Version:</b> <span>vX.X</span>
+        <b>Version:</b> <span>v5.0.0</span>
       </div>
 
       <div class="metaRow">
@@ -617,12 +1256,12 @@
       </div>
 
       <div class="metaRow">
-        <b>Updated:</b> <span style="color:var(--gold); font-weight:900;">2026-02-15</span>
+        <b>Updated:</b> <span style="color:var(--gold); font-weight:900;">2026-02-20</span>
       </div>
     </div>
 
     <div class="releaseCTA">
-      <a class="btnPrimaryBig" href="/downloads/">
+      <a class="btnPrimaryBig" href="downloads/index.html">
         Download Latest Version
       </a>
 
@@ -634,14 +1273,15 @@
   </div>
 
   <div class="whatsnew">
-    <h3>What’s New in vX.X</h3>
+    <h3>What’s New in v5.0.0</h3>
     <ul>
-      <li>Massive environment texture overhaul</li>
-      <li>Improved memory handling &amp; stability (DXVK recommended)</li>
-      <li>New spell visual effects + updated interface elements</li>
+      <li>Added 4 new hairstyles to the Human Male HD model</li>
+      <li>Upgraded all undead horses (including Deathchargers) to HD models from Tomkek</li>
+      <li>Added 30,000+ HD icons to the patch — credits to Aevintiri for the Clean Icons Mechagnome Edition set</li>
+      <li>And more...</li>
     </ul>
 
-    <a class="changelog-link" href="/changelog">
+    <a class="changelog-link" href="changelog.html">
       📜 Read Full Patch Notes <span class="arrow">→</span>
     </a>
   </div>
@@ -660,27 +1300,124 @@
           </p>
 
           <div class="center">
-            <a class="support-btn" href="https://ko-fi.com/stormhand" target="_blank" rel="noreferrer">Support Reforged</a>
+            <a class="support-btn" href="https://ko-fi.com/projectreforged" target="_blank" rel="noreferrer">Support Reforged</a>
           </div>
         </section>
 
+<section class="premium" id="premium">
+  <div class="premium__inner">
+    <header class="premium__head">
+      <span class="premium__badge">Premium</span>
+      <h2 class="premium__title">Go beyond the default experience</h2>
+      <p class="premium__kicker">Optimized visuals. Early updates. Direct support.</p>
+<p class="premium__subkicker">Everything tuned for those who want the best.</p>
+      </p>
+    </header>
+
+    <div class="premium__grid">
+      <article class="premiumCard">
+<div class="premiumCard__icon" aria-hidden="true">
+  <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+  <path d="M12 15.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Z" fill="none"/>
+  <path d="M19.4 15a7.9 7.9 0 0 0 .1-1l2-1.2-2-3.5-2.3.7a7.7 7.7 0 0 0-1.7-1L15 6.6h-6L8.5 9a7.7 7.7 0 0 0-1.7 1l-2.3-.7-2 3.5 2 1.2a7.9 7.9 0 0 0 0 2l-2 1.2 2 3.5 2.3-.7a7.7 7.7 0 0 0 1.7 1l.5 2.4h6l.5-2.4a7.7 7.7 0 0 0 1.7-1l2.3.7 2-3.5-2-1.2Z" fill="none"/>
+</svg>
+</div>
+
+<h3 class="premiumCard__title">Precision-Tuned Visuals</h3>
+        <p class="premiumCard__text">
+          Advanced DXVK and ReShade presets refined for clarity, depth and performance.
+        </p>
+      </article>
+
+<article class="premiumCard premiumCard--featured">
+<div class="premiumCard__icon" aria-hidden="true">
+<svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+  <path d="M14 4c3.3 0 6 2.7 6 6 0 5-6 10-10 10-1.7 0-3-1.3-3-3 0-4 5-10 10-10Z" fill="none"/>
+  <path d="M13 7l4 4" fill="none"/>
+  <path d="M7 14c-1.6.2-3 1.6-3 3.3V20h2.7C8.4 20 9.8 18.6 10 17" fill="none"/>
+  <path d="M10 7H7.5C6.1 7 5 8.1 5 9.5V12" fill="none"/>
+  <path d="M15.5 19H18c1.4 0 2.5-1.1 2.5-2.5V14" fill="none"/>
+</svg></div>
+
+<h3 class="premiumCard__title">Early & Experimental Builds</h3>
+        <p class="premiumCard__text">
+          Get new updates before release and test upcoming improvements first.
+        </p>
+      </article>
+
+<article class="premiumCard premiumCard--featured">
+<div class="premiumCard__icon" aria-hidden="true">
+<svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+  <path d="M7 12l3-3a3 3 0 0 1 4.2 0l.8.8" fill="none"/>
+  <path d="M16 11l2-2a2 2 0 0 1 2.8 0l.2.2a2 2 0 0 1 0 2.8l-2 2" fill="none"/>
+  <path d="M8 13l-2 2a2 2 0 0 1-2.8 0l-.2-.2a2 2 0 0 1 0-2.8l2-2" fill="none"/>
+  <path d="M9 14l2.2 2.2a2 2 0 0 0 2.8 0L16 14" fill="none"/>
+  <path d="M8.5 15.5l1 1a1.6 1.6 0 0 0 2.2 0" fill="none"/>
+</svg></div>
+
+ <h3 class="premiumCard__title">Direct Access & Support</h3>
+        <p class="premiumCard__text">
+          Private Discord channel with personalized help and configuration guidance.
+        </p>
+      </article>
+    </div>
+
+    <div class="premium__value">
+      <p class="premium__valueLine">
+        Not just files. <strong>A continuously refined experience.</strong>
+      </p>
+
+      <ul class="premium__checks" role="list">
+        <li>Cancel anytime</li>
+        <li>Instant access</li>
+        <li>Support the project</li>
+      </ul>
+
+      <div class="premium__ctaRow">
+        <a class="btnPremium" href="https://ko-fi.com/projectreforged/tiers" target="_blank" rel="noopener">
+         Unlock Premium
+        </a>Get optimized presets, early updates and direct support.
+      </div>
+    </div>
+  </div>
+</section>
+
+
         <div class="divider"></div>
 
-        <h2>Preview</h2>
-        <p class="small">Optional but strongly recommended: upload 2–4 screenshots to this repository and link them here.</p>
+<h2>In-Game Visuals</h2>
+<p class="small">A closer look at how Project Reforged enhances clarity, depth and atmosphere while preserving the original experience.</p>
 
-        <div class="shots">
-          <div class="shot">
-            <img src="screenshots/shot1.jpg" alt="Project Reforged preview 1">
-            <div class="cap">Screenshot #1 — replace this caption.</div>
-          </div>
-          <div class="shot">
-            <img src="screenshots/shot2.jpg" alt="Project Reforged preview 2">
-            <div class="cap">Screenshot #2 — replace this caption.</div>
-          </div>
-        </div>
+<div class="shotsGrid">
 
-        <div class="divider"></div>
+  <div class="shot" data-caption="Refined lighting and atmospheric balance">
+    <img src="screenshots/shot1.jpg">
+  </div>
+
+  <div class="shot" data-caption="Enhanced depth and natural lighting">
+    <img src="screenshots/shot2.jpg">
+  </div>
+
+  <div class="shot" data-caption="Richer color and depth">
+    <img src="screenshots/shot3.jpg">
+  </div>
+
+  <div class="shot" data-caption="Refined atmosphere and environmental depth">
+    <img src="screenshots/shot4.jpg">
+  </div>
+
+<div class="shot" data-caption="Improved scene clarity and ambient lighting">
+    <img src="screenshots/shot5.jpg">
+  </div>
+
+<div class="shot" data-caption="Enhanced environmental detail and depth">
+    <img src="screenshots/shot6.jpg">
+  </div>
+
+
+</div>
+
+<div class="divider"></div>
 
         <h2>Compatibility</h2>
         <p class="note">
@@ -708,7 +1445,7 @@
 
         <p class="small">
           Contact via Discord:
-          <a href="https://discord.gg/SEU_LINK_AQUI" target="_blank" rel="noreferrer">Join the Project Reforged Discord</a>
+          <a href="https://discord.gg/JCXtVUAF" target="_blank" rel="noreferrer">Join the Project Reforged Discord</a>
         </p>
 
         <div class="divider"></div>
@@ -756,8 +1493,8 @@
         </ul>
       </section>
 
-      <!-- INSTALL / SUPPORT / CREDITS -->
-      <aside class="box" id="install">
+
+      <aside class="box">
         <h2>⚙️ Important Installation Notes</h2>
         <p class="note">
           All modules are optional and independent — with a few important exceptions:
@@ -783,24 +1520,22 @@
         </ol>
 
         <div class="ctaRow">
-          <a class="btn primary" href="/downloads/">Get Project Reforged</a>
+          <a class="btn primary" href="downloads/index.html">Get Project Reforged</a>
         </div>
 
         <div class="divider"></div>
 
-        <h2>❤️ Enjoying Project Reforged?</h2>
-        <p class="note">
-          If you find value in this work and wish to support its continued evolution, contributions are welcome!
-        </p>
-        <p class="note">
-          Contributions support my personal development time and technical research only.
-        </p>
+       <h2>❤️ Enjoying Project Reforged?</h2>
 
-        <div class="ctaRow">
-          <a class="btn primary" href="https://ko-fi.com/stormhand" target="_blank" rel="noreferrer">
-            <img src="assets/kofi-button.png" width="260" alt="Support on Ko-fi">
-          </a>
-        </div>
+<p>If you find value in this work and wish to support its continued evolution, contributions are welcome!</p>
+
+<p class="small">Contributions support my personal development time and technical research only.</p>
+
+<div class="supportLogoWrap">
+  <a href="https://ko-fi.com/projectreforged" target="_blank">
+ <img class="supportLogo" src="assets/logocircle.png" alt="Project Reforged logo">
+</a>
+</div>
 
         <div class="divider"></div>
 
