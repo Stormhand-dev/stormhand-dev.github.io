@@ -511,7 +511,20 @@
 
 
     /* ================= Responsive ================= */
+
 @media (max-width: 560px){
+  .releaseCTA{ align-items:stretch; }
+  .releaseHint{ text-align:left; max-width:none; }
+  .btnPrimaryBig{ width:100%; }
+
+  /* Hero logo: mobile only */
+  .heroImage{ margin-bottom: 22px; }
+  .heroImage img{
+    height: 240px;       /* ajuste aqui: 220–280 */
+    width: 100%;
+    object-fit: contain; /* não corta o logo */
+  }
+}
 
   /* Support logo: mobile only */
   .supportLogoWrap{
