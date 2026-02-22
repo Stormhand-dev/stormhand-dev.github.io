@@ -524,19 +524,24 @@
     width: 100%;
     object-fit: contain; /* não corta o logo */
   }
-}
 
   /* Support logo: mobile only */
   .supportLogoWrap{
-    width: 140px;        /* desktop continua 180 */
-    margin: 22px auto 0; /* ajusta o respiro */
+    width: 140px;
+    margin: 22px auto 0;
   }
 
   .supportLogo{
-    width: 140px;        /* garante que a img siga o wrap */
+    width: 140px;
   }
 
-  /* opcional: pulse um pouco menos no mobile (evita ficar chamando atenção demais) */
+  /* pulse mais discreto no mobile */
+  @keyframes breathe{
+    0%,100%{ transform: scale(1); }
+    50%{ transform: scale(1.03); }
+  }
+}
+ 
   @keyframes breathe{
     0%,100%{ transform: scale(1); }
     50%{ transform: scale(1.03); }
