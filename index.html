@@ -535,11 +535,7 @@
     width: 140px;
   }
 
-  /* pulse mais discreto no mobile */
-  @keyframes breathe{
-    0%,100%{ transform: scale(1); }
-    50%{ transform: scale(1.03); }
-  }
+  
 }
  
   @keyframes breathe{
@@ -776,6 +772,14 @@ display: flex;
 
 }
 
+.premiumCard .icon{
+  stroke: rgba(255,255,255,.92);
+}
+
+.premiumCard:active .icon,
+.premiumCard:focus-within .icon{
+  stroke: var(--accent, #f5c542);
+}
 
 .premiumCard:hover .icon{
   stroke: var(--accent, #f5c542);
@@ -1156,8 +1160,8 @@ background: rgba(245,197,66,.08);
   background: radial-gradient(
     circle,
     rgba(255,140,0,.22) 0%,
-    rgba(255,140,0,.10) 35%,
-    rgba(255,140,0,.04) 55%,
+    rgba(255,140,0,.10) 15%,
+    rgba(255,140,0,.04) 35%,
     transparent 70%
   );
 
